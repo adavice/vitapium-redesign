@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>vitapium Recipes</title>
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.png">
+    <link rel="stylesheet" href="css/open_sans.css">
+    <link rel="stylesheet" href="css/playfair.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/slick-carouse1.8.1.css">
+    <link rel="stylesheet" href="css/slick-carouse1.8.1-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <style>
+        main .slider .img1 {
+            background: url(https://photos.bigoven.com/recipe/hero/chicken-lentil-kale-soup.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        main .slider .img2 {
+            background: url(https://photos.bigoven.com/recipe/hero/simple-fondant-potatoes.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        main .slider .img3 {
+            background: url(https://photos.bigoven.com/recipe/hero/tomato-basil-dip.jpg) no-repeat center;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="warning">
+            <div class="container">
+                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
+                        xml:space="preserve">
+                        <g>
+                            <path
+                                d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z">
+                            </path>
+                        </g>
+                    </svg> Have a Problem? <a href="./contactUs.html">Contact us</a> or <a href="cancel.html">cancel
+                        membership</a></span>
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo"><img src="imgs/logo.png" alt=""></a>
+                <div class="search" style="display: flex;">
+                    <form id="searchForm">
+                        <input type="search" id="search" placeholder="Search for a recipe" name="search" value="" maxlength="15">
+                        <input type="submit" value="">
+                        
+                    </form>
+
+                </div>
+
+
+                <button class="userButton">
+                    <svg class="open" onclick="clickLogin(true);" height="512pt" viewBox="0 0 512 512" width="512pt"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m437.019531 74.980469c-48.351562-48.351563-112.640625-74.980469-181.019531-74.980469-68.382812 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.636719-74.980469 181.019531 0 68.378906 26.628906 132.667969 74.980469 181.019531 48.351562 48.351563 112.636719 74.980469 181.019531 74.980469 68.378906 0 132.667969-26.628906 181.019531-74.980469 48.351563-48.351562 74.980469-112.640625 74.980469-181.019531 0-68.382812-26.628906-132.667969-74.980469-181.019531zm-308.679687 367.40625c10.707031-61.648438 64.128906-107.121094 127.660156-107.121094 63.535156 0 116.953125 45.472656 127.660156 107.121094-36.347656 24.972656-80.324218 39.613281-127.660156 39.613281s-91.3125-14.640625-127.660156-39.613281zm46.261718-218.519531c0-44.886719 36.515626-81.398438 81.398438-81.398438s81.398438 36.515625 81.398438 81.398438c0 44.882812-36.515626 81.398437-81.398438 81.398437s-81.398438-36.515625-81.398438-81.398437zm235.042969 197.710937c-8.074219-28.699219-24.109375-54.738281-46.585937-75.078125-13.789063-12.480469-29.484375-22.328125-46.359375-29.269531 30.5-19.894531 50.703125-54.3125 50.703125-93.363281 0-61.425782-49.976563-111.398438-111.402344-111.398438s-111.398438 49.972656-111.398438 111.398438c0 39.050781 20.203126 73.46875 50.699219 93.363281-16.871093 6.941406-32.570312 16.785156-46.359375 29.265625-22.472656 20.339844-38.511718 46.378906-46.585937 75.078125-44.472657-41.300781-72.355469-100.238281-72.355469-165.574219 0-124.617188 101.382812-226 226-226s226 101.382812 226 226c0 65.339844-27.882812 124.277344-72.355469 165.578125zm0 0">
+                        </path>
+                    </svg>
+                    <svg class="close" onclick="clickLogin(false);" viewBox="0 0 512 512" width="512pt"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0" />
+                        <path
+                            d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0" />
+                        <path
+                            d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0" />
+                    </svg>
+                </button>
+                <ul class="headerMenu">
+                    <li>
+                        <a href="index.html">Recipes</a>
+                    </li>
+                    <li>
+                        <a href="articles.html">Articles</a>
+                    </li>
+                    <li>
+                        <a href="calculator.html">Calorie Calculator</a>
+                    </li>
+                    <li>
+                        <a href="mealplan.html">Meal Plan</a>
+                    </li>
+                </ul>
+                <div class="login">
+                    <form id="authenticationForm" action="index.html?page=" method="post">
+                        <!--<input type="hidden" name="page" value="">-->
+                        <input type="text" id="userName" name="u" value="" placeholder="User" maxlength="22">
+                        <input type="password" id="userPassword" name="c" placeholder="Password" maxlength="12">
+                        <input type="submit" id="authentication" value="Login" name="authentication">
+                        <a href="signUp2.html" id="signIn">Sign Up</a>
+                        <div class="getPremium">
+                            <span class="text">Don’t have an account?</span>
+                            <a href="signUp2.html" class="getAccess">Get access to premium</a>
+                            <a href="cancel.html" class="getAccess out">Cancel Membership</a>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </header>
+        <main class="articles read">
+
+            <section class="title">
+                <h1 class="underline">COCONUT OIL WONDERS</h1>
+            </section>
+            <section class="container">
+                <div class="article_block">
+                    <div class="article_illustration">
+                        <img src="imgs/articles/coconut.png" alt="">
+                    </div>
+                    <p>Coconut oil, just like a cheeky dude who grew into a full-fledged hunk, is now the hot, sexy oil
+                        that no one can shut up about. Gwyneth Paltrow swallows it in her mouth to whiten her teeth,
+                        Poppy Delevingne sleeps in it, and Kelly Osborne wants you all to tap your cheekbones for a
+                        natural highlight. Coconut oil does not moisturize - not oil - but used strategically, it can
+                        soften, add shine and help repair dry hair.
+                        Read on for nine ways to use coconut oil in your hair routine.
+                    </p>
+                    <h3>1. USE IT AS A PROTECTIVE "PRE-POO"</h3>
+                    <p>Here's a trick that's especially helpful for those with dry or curly hair: avoid scalp, coat dry
+                        hair with a dollop of coconut oil an hour or so before taking a shower. The oil protects each
+                        strand from drying out while you shampoo. Rinse the oil from your hair after shampooing and
+                        apply conditioner as normal. (Note that if you have thin hair, the oil may be too much for you.)
+                    </p>
+                    <h3>2. MAKE YOUR CONDITION BETTER THAN IT EVER BEEN</h3>
+                    <p>Coconut oil makes any conditioner even more conditioning. After you saturate your hair with
+                        conditioner, add a layer of coconut oil on top. The oil is occlusive, so it will trap the
+                        conditioner's moisturizing ingredients in your hair, allowing them to penetrate the shaft longer
+                        and more effectively. Wait at least 15 minutes or up to an hour before rinsing - the longer you
+                        wait, the softer your hair will be.</p>
+                    <h3>3. JUST LET IT IN
+                    </h3>
+                    <p>This is a convenient solution for those with thick, dry hair. After your shampoo and conditioner,
+                        comb all the moisturizer through your hair (DevaCurls' Supercream and Oyin Handmade's Hair Dew
+                        are really great). Then take a quarter amount of coconut oil and put it on top of the
+                        moisturizer. Dry your hair as you normally would. The oil traps in the moisturizer and keeps
+                        your hair hydrated for longer.</p>
+                    <h3>4. MAKE DETANGLING A LITTLE LESS BURNING</h3>
+                    <p>Bun hair? Run coconut oil over the sections that need a little help. The oil provides a useful
+                        "slip" that makes combing less difficult.</p>
+                    <h3>5. AND MAKE YOUR HAIR MORE PHOTOGRAPHY</h3>
+                    <p>Instead of putting a lot of shiny stuff in your hair, scoop a few dollops of coconut oil into a
+                        spray bottle and spritz your hair for a natural shine. If you are working with solidified oil,
+                        place the bottle in a bowl of warm water for a few minutes to allow the oil to liquefy again.
+                    </p>
+                    <h3>6. WEAR IT LIKE A BATH CAP</h3>
+                    <p>The worst thing about taking a dip? The big salt and chlorine wreck on your hair, of course.
+                        Before going to the pool or beach, cover your hair with coconut oil. The oil acts as a barrier
+                        between your strands and the water to some extent. Think of it as a natural swim cap (or a swim
+                        cap that won't make you look like a sucker).</p>
+                    <h3>7. OR A HUMIDITY DEGREE</h3>
+                    <p>Rub a pea-sized amount of coconut oil between your fingers to tame flyaways and frizz. Transfer
+                        the oil to the frizzy areas of your hair to soothe rogue strands. A little goes a long way!</p>
+                    <!--******* sidebar-->
+                    <h3>8. PHOTOSHOP YOUR SPLIT POINTS</h3>
+                    <p>Coconut oil doesn't glue your split ends back together (nothing will, despite what some products
+                        claim), but it can hide frayed ends for a short while. Simply rub a little bit on your ends. The
+                        oil gives shine and temporarily smoothes the torn hair.</p>
+                    <h3>9. GET RID OF LICE</h3>
+                    <p>Coconut oil is surprisingly effective. A 2002 study looked at 940 children who were given coconut
+                        oil, anise oil and ylang hair cocktail. The mixture was applied to each child's hair three times
+                        a day for five days. The combination of coconut and oil was successful for 92.3 percent of the
+                        lice cases, slightly better than the medicinal control group, which saw a 92.2 percent success
+                        rate.</p>
+                    <h3>BUT DO NOT USE IT FOR HAIR LOSS OR DANDRUFF.</h3>
+                    <p>There are no credible, peer-reviewed studies showing that coconut oil can grow hair. It's a bit
+                        boring, but your best bet is still Rogaine. As for dandruff, coconut oil can cause even more
+                        flakes! When used on your scalp, coconut oil clogs pores and prevents hair follicles from
+                        "breathing". This dries out your scalp and can make a case of dandruff more pronounced. The
+                        solution? Try a medicated shampoo. </p>
+                    <h3>
+                        BENEFITS OF COCONUT OIL
+                    </h3>
+                    <p>Coconut oil is rich in antioxidants and fatty acids and has antiviral, antifungal and
+                        antibacterial properties. This allows coconut oil to improve the appearance, texture and health
+                        of our hair. When used on hair, coconut oil can:</p>
+                    <p>
+                    <ul>
+                        <li>- improve hair dryness</li>
+                        <li>- improve scalp health</li>
+                        <li>- protect the hair against protein loss</li>
+                        <li>- protect hair from UV exposure</li>
+                        <li>- fight infections and fungus</li>
+                        <li>- support hair growth</li>
+                        <li>- add volume and shine</li>
+                    </ul>
+                    </p>
+                    <p>Lush, shiny, manageable and healthy hair can be yours - with the benefits of coconut oil! Have
+                        you been tempted to ditch your commercial conditioners, serums, and styling products that damage
+                        your hair (and possibly your health) over time? Well guess what? You can replace them with this
+                        all-natural solution. Coconut oil is rich in antimicrobial properties, lauric acid and medium
+                        chain fatty acids that strengthen hair, condition the scalp and help hair regrowth. While we've
+                        been hearing about coconut oil's internal health benefits for quite some time, it is time to
+                        bring light to other uses of coconut oil, including its use as an all-natural, multitasking hair
+                        care product. Rich in vitamins, minerals and other nutrients, the nourishing benefits of coconut
+                        oil for hair keeps your hair strong, shiny and looking great!</p>
+
+                </div>
+                <aside>
+                    <div>
+                        <div class="img">
+                            <img src="imgs/articles/waking_up_early.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <h3>7 SIMPLE TIPS TO WAKE UP EARLY</h3>
+                            <a href="article_read_13.html" class="showRecipe">Read More</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img">
+                            <img src="imgs/articles/limited%20budget.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <h3>TIPS FOR CLEAN EATING WITH A LIMITED BUDGET</h3>
+                            <a href="article_read_4.html" class="showRecipe">Read More</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img">
+                            <img src="imgs/articles/serving_size.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <h3>HOW TO MEASURE SERVING SIZES</h3>
+                            <a href="article_read_6.html" class="showRecipe">Read More</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img">
+                            <img src="imgs/articles/live_longer.png" alt="">
+                        </div>
+                        <div class="wrap">
+                            <h3>9 NUTRITIONAL RULES TO HELP YOU LIVE LONGER</h3>
+                            <a href="article_read_9.html" class="showRecipe">Read More</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+        </main>
+        <footer>
+            <section class="ft-main ">
+                <div class="ft-main-item side footer-menu">
+                    <h2 class="ft-title">Menu</h2>
+                    <ul>
+                        <li><a href="/?page=policy">Privacy Policy</a></li>
+                        <li><a href="/?page=terms">Terms &amp; Conditions</a></li>
+                        <li><a href="/?page=faq">FAQ</a></li>
+                        <li><a href="/?page=refund">Refund Policy</a></li>
+                        <li><a href="/?page=subscriptionterms">Subscription Terms</a></li>
+                        <li><a href="/?page=contactUs">Contact us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="ft-main-item" id="main-item">
+                    <a href="/" class="logo"><img src="imgs/logo.png" alt=""></a>
+                    <div class="links">
+                        <img src="imgs/mastercard.png">
+                        <img src="imgs/securecode.png">
+                        <img src="imgs/verified.png">
+                        <img src="imgs/visa-electron.png">
+                    </div>
+                </div>
+    
+                <div class="ft-main-item side footer-contact">
+                    <h2 class="ft-title">Contact us</h2>
+                    <ul>
+                        <li>
+    
+                            <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm94.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0"></path></svg>
+                            <a href="/?page=cancel">Cancel subscription</a>
+                        </li>
+                        <li><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20" width="20" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <polygon points="339.392,258.624 512,367.744 512,144.896 "></polygon>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <polygon points="0,144.896 0,367.744 172.608,258.624 "></polygon>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z"></path>
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+                                            <path d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+                                L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            <a href="mailto:support@vitapium.com">support@vitapium.com</a>
+                        </li>
+                        <li><svg id="Capa_1" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <circle cx="256" cy="165" r="75"></circle>
+                                <path d="m256 0c-81.108 0-165 61.714-165 165 0 94.351 147.217 274.08 153.472 281.609 2.856 3.413 7.075 5.391 11.528 5.391s8.672-1.978 11.528-5.391c6.255-7.529 153.472-187.258 153.472-281.609 0-90.981-74.019-165-165-165zm0 270c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z"></path>
+                                <path d="m357.087 377.811c-28.922 41.873-55.961 75.306-66.487 87.973-8.643 10.327-21.241 16.216-34.6 16.216s-25.957-5.889-34.541-16.143c-10.551-12.698-37.608-46.155-66.544-88.046-38.83 13.722-63.915 35.1-63.915 59.189 0 41.42 73.874 75 165 75s165-33.58 165-75c0-24.088-25.084-45.467-63.913-59.189z"></path>
+                            </g>
+                        </svg> <a href="https://maps.app.goo.gl/9fEhK1GemQkRuUbi8"><img style="width: 155px;" src="data:image/png;base64,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" alt="" />
+                            </a></li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.2969 4.49609L15.2168 2.41797C15.0701 2.27059 14.8957 2.15366 14.7036 2.07389C14.5116 1.99412 14.3056 1.95308 14.0977 1.95313C13.6738 1.95313 13.2754 2.11914 12.9766 2.41797L10.7383 4.65625C10.5909 4.80298 10.474 4.97738 10.3942 5.16944C10.3144 5.3615 10.2734 5.56743 10.2734 5.77539C10.2734 6.19922 10.4395 6.59766 10.7383 6.89648L12.375 8.5332C11.9919 9.37766 11.4592 10.1459 10.8027 10.8008C10.1479 11.4589 9.37975 11.9935 8.53516 12.3789L6.89844 10.7422C6.75171 10.5948 6.57731 10.4779 6.38525 10.3981C6.19319 10.3183 5.98727 10.2773 5.7793 10.2773C5.35547 10.2773 4.95703 10.4434 4.65821 10.7422L2.41797 12.9785C2.27041 13.1255 2.15338 13.3002 2.0736 13.4926C1.99383 13.685 1.95288 13.8913 1.95313 14.0996C1.95313 14.5234 2.11914 14.9219 2.41797 15.2207L4.49414 17.2969C4.97071 17.7754 5.62891 18.0469 6.30469 18.0469C6.44727 18.0469 6.58399 18.0352 6.71875 18.0117C9.35157 17.5781 11.9629 16.1777 14.0703 14.0723C16.1758 11.9688 17.5742 9.35937 18.0137 6.71875C18.1465 5.91211 17.8789 5.08203 17.2969 4.49609V4.49609Z" />
+                                    </svg>
+                                <a>Support:&nbsp;+357&nbsp;95128763</a>
+                            </li>
+                    </ul>
+                </div>
+            </section>
+            <p>© 2025 vitapiumrecipes.com. All Rights Reserved.<br/>
+				<img style="width: 140px; margin-top: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAAAUCAYAAADC+NyYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAzrSURBVGhD7Zr5U5vnncA/QjcIIw4hECCEwCDAmNMmnD5IbAfHbtZe203TTrKz7bT1bGbSqf+A/QPsjjPxTtJMupk2tZvL2SY7k04uu3bqY22I8RIDRhwCYRC3QOiWePcHjMwrMHYa26l3+Mzol+f7fY73eZ/ne72SWCylAmus8RgTE93w/xm1WsWLL/6IsrKSaBEAZrOJn/3sBRITtdGiNf6BkSxa4oMHn8VozIoI/H4/VmsfZ8+ex+8PLO3z2KJWqzh0aB9tbe20tbVHizGbTTQ1beGDDz5ietoZLf5OJCUl8sMf7qe7u4cvvvhrtPihkJio5bnn/hmAd945zdTUdLQKjY11bN5cQVtb+9+9rief3EpSkpb33vuzqH1xv1NSkkXti4RCIT7++C8A7N37NDKZLCLz+/309w9w5sx5PB7vkl7LkaakpP07QHGxhf7+Qf74x/e4evUac3NuyspK0Ot1dHf3RPd7LJHLZWzYUIjDMYbDMRYtJjFRi9lsoqPjJj6fL1r8ndiwoQijMROlUoHV2kcwGIxWeeCo1SoslvVIpVK8Xh/DwyMieWxsLHV11cjlMsbHJ+nrs4nk94vZbEKtVnHjRpeoPRQK0dbWzsWLV7h48QqxsbHIZDLeeusk589f5PLlFqannSQmasnMzODkyfc4c+Y81679L5OTUxQVWSgvL2VgwI7H4xGNvZQVw4lgMEh7ewetrW0YDGkkJKyLVlnjWyCXyykoWE93txWFQoHJZIxWeahMTEyQl2dGKpWK2rOyDABMTT1Yr/Nd8Xp9dHVZOXXqA7xeL9u3Ny5b+1JEltjr9Yluo1K5sOGdnQuWSaVS0dz8FM3NO6ivf4Ly8lIARkYcqNUqfvzjgyiVSm7dGgYgKyuDF1/8EfHx8ZFxMzMNPP/8QaamppmedpKensaBAz+gqWkLNTWbMBjSsduHCAQWLNXBg8+iUqkoL9/Inj27KChYz82bVgC2bq1nz55dNDTUUlpaQiAQYGxsIrJ+iyWf/fv3snVrPZs2laNWq0lIWIfDMbqqJQ4GQzzzzC62bWugsrIMQRAYGXGg1SbwwgvPEQ6HRf2zsjJ4/vkDkWeKJiMjneJiC5cuXSUhIYHk5KTIM3DbkjU3P0UwGGT//h+wbVsDgiCwe/eOVefy+wPs3LmdXbuepKGhlk2bKtFqExgYsDM/P49araKoyEJPTx9GYxYOxyizsy4AJBIJ9fW1TE5OoVDIRe/eaMzkwIFn2batgdrazVRWllJVVUFurgmrtY9wOBxZD6tY4mjMZhPr1sVz40YnoVAo0n43DxgMBpmfn8diyWdgwI7b7Y7IlrKiJV5Ep0shJkZCOBxGJpPR3PwUyclJnDz5PseOneDTT7+gsrKMiopSvF4fY2MTGI2ZSCQSAHJyTPj9AfT6VJRKBQCpqTqCwSBjY+MkJyfyzDM76e7u5ZVXXuf11/8TqVTK7t07RTevvHwjMTES3n77XU6f/hifz09jYy3Z2Vm8886HHDt2gq++ukh9fQ25uTkAZGZm0NS0Bat1Yew33vg9CoWcxMTEyLgrERurxmTK4tSpDzh27ATnzl2gurqSoqICnM4ZBgaGKChYcNGL5OSYcLs9kcsbTXFxIV6vl9HRMXp7+0hPT0WnSxHpaDRx1NRUc+7cBX73u7dpaWm751zhcIihoWHeeusUR4++yunTH2EyGcnPzxONPT4+gdM5Q06OKdKWmKglJUV8mQDi4+PZubMJm22Q3/zmPzhx4g1GR8cZHnbw7rv/hd/vF+k/bBaNUnJyUrQowoqHWK1WUVFRSmVlGVZrH7OzLjIy0klL03Pu3AXGxsYRBIGenn46Om5SUlKEWq3CZhtEq00gPl6DXC4nKyuD7u4e1GpV5KVlZWUwPj7B3JybwsIC5ubcXL58lVAohMfjpaXlGlptgigZCAQCfP75WcbHJ3C55oiP12A2m7h48X8ia7lxo4uJicnIC7RY1uN2u7l06QqhUAifz8flyy33jHWDwRAtLW24XC4EQaC9vYOhoRGKiixIJBJ6evpISkqMrE+tVmE2Z9PXZ1sxAdZo4sjMNGCz2fH7A9jtt5ifnyc7+04SDaBQKGlp+Zqurm6mp50Eg8F7zuX3B2hra8flWrCuIyMLllav14nGnp8X6OuzkZeXQ2xsLAC5uTnMzbkZHnaIdHW6ZORyOX19NgRBwO8PYLX2otWuQ6VSinQfBYHAwp4qFPJoUQTRIS4rK+HIkZc4fPinbNpUwZUrrZw9+xXcvrnAMnc5OjqKUqlEpVLhcIwCkJKSjF6vQ61W0dVlxe32kJFhQKOJQ6dLYWDADoDBkEZGRjq/+tVhjhx5iSNHXmLfvj2o1Sri4hY2G2B42CE6ICkpyWg0cezZ83Sk369//W8YjZloNAv9kpK0eDwevN47h9br9a6aIHDbhS19RkEQmJubIy4uFpVKid0+hNvtpqBgPQAZGQaUSiXd3b1LRrlDTk42arWK/v4FVz0zM8vUlJPCwvyIdwLw+XwMDYkt+b3mUioVbNlSx89//i+8/PIvOXz4p6Sn61eMH63WXmJiYjAY0pBKpeTm5tDb278sNJiamiYcDqHXpyKRSFAqFaxfn4vX64uEeI8ShUKBIAh4vXevUIgOcVtbO0ePvsqxYyf47W/foqXlGoKw+rcQqVRGTMzCMDMzs8zNuTEY0jCZjLjdHsbGxrHbhzCbTaSlpSKVShkZWTjsAIODdo4efVX0O378tXtmyoFAkA8//O9lfaPLPA8avz/AzZs9mExZKJUK8vLMOJ0zTE5ORasikUiwWPJRKpUcOrQvctmys7PQahNITRVbzGhWm0sqldLcvAOTycj77/+Z48df4803f79iGY3b72ZiYoriYgsGQxoaTRy9vf3RajidM3z55Tmqqsp4+eVf8otf/CsymZRPP/1y2YF/FKSn65FIJExPz0SLIqwYTqzExMQkgiAs+xCQkpKM1+vF5/MRDoex24fIzMwgKyuTvj4b4XAYm23wdqyZjdvtiWz0+Pgk8fHxERd3v0xNTSMIwqpx0tSUE5VKJbJ2SqUSpXJ1l6hQKETPKJFI0Gg0uN0efL6FeLC/fwCVSkVurpn0dD0dHV0rvmCdLgWdLoVz5y6ILtqbb/4Bvz9AcXFhdJdl3G2udeviSU9P4/r1byL7KZVKRbXWpQiCQHd3D6mpOioqSpmYmFrmVRcxGrMYGhrm+PHXeOWV1/jTn07jdN79ED0sYmNjKS/fyK1bw4yP30nYo7nvQzwyMorDMUpDQw1abQISiYS8vByKigpob++IuO3hYQcJCevQaOKw2QYBmJycIhQKUVCwHodjNFIj/eabTmQyGTt3bic+Ph6JREJSUiJFRQXI5XePgWZmZrFae9m0qYLi4oVYVS6Xk5dnRq9PBaCry4pGo6GqqgKZTIZKpaKmZjMaTVz0cCKk0hg2b66IrKekpIjMzHQ6OroiXml8fIKxsQlKSzcgkUiw229FDwNAfn4u4XAYq1UcajidM3R2dpOZuRBircbd5vL5fHg8HvR6XeT56uqqRWFYNDbbIOFwGJMpm87OO88TTUpKEi7XXHTzqkilMhITtaKfWq2KVrsv4uJiKSsr4Sc/OYRUKuVvf7uEIAjI5XIOHvwn9u59WhQyrVpiW4ogCPT329DpdDQ1baW+/gmys420tFyjtbUtohcMBikutuB2e7h69WsEQSAUCqHTpWAwpNHaei3iej0eD8PDDgoK1tPYWENdXTXFxRYCgWAksbjbugYHh1AqlVRXV9HYWEt1dSV6vQ6bbYDZWRezsy5crjk2b65gy5Y6Sks30N8/ALcv1d1KbAkJCfT29rN79w4aG2sxGNK5cqWV69e/EekKwjzl5RsZHh5ZJuN2vNrQUENPT/+yCgC3a6EbNhTics0RDAZXLDEtstJcoVAIp3OGqqpytmypo6yshKGhYZzOGQRhIZFbLLH19w9EkkW9PhWVSsmFC1cixiR6j+VyOdXVVdTVPUFtbTU1NZspKMjDbh8S5RiLmM0m8vNzqagoFf0UCoXova1WYispKaKqqpza2mqqqspJS9PT2XmTTz75DJdrobQmlUrZuLEIuVxOZ2c38/PzsPSz8xrfDr0+lX379vD552fp6emLFj9QHuVclZVllJdv5MyZ85FwQ6FQsGtXE07nDB999El0l++d+w4n1hBjNGbi9/uXlageBo9qLrlcTmFhATbbIH19NqannUxPOxkdHWNkZFSUX/wjsXaI/w4MhjQqKkrp6Lh5z5Ldd+VRzhUMBnG5Fr4JaLUJcDuxLS62kJdnZnBw5dj/+2YtnPgWLP4rTKVS0tVl5bPPzohiuwfJo5xrKRpNHDt2bCc7OwupVMr8/Dxzc25aW9v4+uvrd00Gv0/WDvEajz1r4cQajz1rh3iNx57/A+LI5H4JA6ZoAAAAAElFTkSuQmCC" alt="" /></p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick-carouse1.8.1.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/index.js?"></script>
+</body>
+
+</html>
