@@ -165,7 +165,13 @@ input[type="submit"] {
   border-radius: 50px;
   color: var(--text-bg);
   cursor: pointer;
-  background-image: linear-gradient(to right, var(--accent2), var(--accent1), var(--accent1), var(--main));
+  background-image: linear-gradient(
+    to right,
+    var(--accent2),
+    var(--accent1),
+    var(--accent1),
+    var(--main)
+  );
   background-size: 300% 100%;
   box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
   moz-transition: all 0.4s ease-in-out;
@@ -203,7 +209,8 @@ input[type="submit"] {
 }
 
 #warning a {
-  color: var(--text-bg);
+  color: var(--bg-text);
+  text-decoration: underline;
 }
 
 #warning svg {
@@ -735,12 +742,17 @@ main.policy_terms li {
 main.policy_terms article,
 main.policy_terms article p,
 main.policy_terms .orderList {
+  color: var(--bg-text);
   margin-bottom: 25px;
 }
 
 main.policy_terms article h3 {
   text-transform: uppercase;
   color: var(--main);
+}
+
+article p{
+  color: var(--bg-text);
 }
 
 main.policy_terms.terms h3 {
@@ -957,6 +969,7 @@ header .container .logOutUser a {
 
 .goalBlock p {
   text-align: center;
+  color: var(--bg-text);
 }
 
 .goalNumbers {
@@ -1061,20 +1074,23 @@ main .set > div .img {
   align-items: center;
   gap: 5px;
   width: fit-content;
-  border: 2px solid var(--main);
-  color: #fff;
-  background: transparent;
+  /*border: 2px solid var(--main);*/
+  color: var(--main);
+  background: var(--bg-text);
 }
 
-.form-control{
+.recipe_link:hover {
+  color: var(--accent2);
+}
+
+.form-control {
   border-radius: 50px !important;
 }
 
-.form-control:focus{
+.form-control:focus {
   border: 1px solid #ced4da;
   box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
-
 
 @media screen and (max-width: 570px) {
   .cancel .form-control {
@@ -1202,6 +1218,9 @@ footer a {
 
   header .container .search input[type="submit"] {
     top: 8px;
+    width: 35px;
+    background-size: 35%;
+    right: 0px;
   }
 
   header .container .logo {

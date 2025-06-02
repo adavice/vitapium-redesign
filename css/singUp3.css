@@ -24,7 +24,8 @@ main .contactBox .price > div span {
 
 }
 main form#billingForm {
-	background: var(--accent2);
+	background: var(--text-bg);
+	box-shadow: 0px 0px 10px 0px rgb(0 10 24 / 18%);
 	border-radius: 4px;
 	padding: 20px 25px 15px 15px;
 	overflow: hidden;
@@ -37,7 +38,7 @@ main form#billingForm .row {
 main form#billingForm .title {
 	font-size: 14px;
 	font-weight: bold;
-	color: #fff;
+	color: var(--bg-text);
 	width: 38%;
 	text-align: right;
 	padding-right: 15px;
