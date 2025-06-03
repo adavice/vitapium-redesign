@@ -58,7 +58,8 @@ main .premiumRecipe .recipe .description {
 main .premiumRecipe .recipe .info > span {
 	display: block;
 	text-transform: uppercase;
-	font-size: 14px
+	font-size: 14px;
+	color: var(--bg-text);
 }
 main .premiumRecipe .recipe .info {
 	margin-bottom: 30px;

@@ -1,751 +1,1004 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <title>nutrigrids Recipes</title>
+    <link rel="shortcut icon" href="imgs/favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.svg" />
+    <link rel="stylesheet" href="css/open_sans.css" />
+    <link rel="stylesheet" href="css/playfair.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/slick-carouse1.8.1.css" />
+    <link rel="stylesheet" href="css/slick-carouse1.8.1-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      main .slider .img1 {
+        background: url(imgs/articles/wellness.png) no-repeat center;
+        background-size: cover;
+      }
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	<title>nutrigrids Recipes</title>
-	<link rel="shortcut icon" href="imgs/favicon.svg" />
-	<link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.svg">
-	<link rel="stylesheet" href="css/open_sans.css">
-	<link rel="stylesheet" href="css/playfair.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/slick-carouse1.8.1.css">
-	<link rel="stylesheet" href="css/slick-carouse1.8.1-theme.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<style>
-		main .slider .img1 {
-			background: url(imgs/articles/wellness.png) no-repeat center;
-			background-size: cover;
-		}
+      main .slider .img2 {
+        background: url(imgs/articles/healthy_lifestyle.png) no-repeat center;
+        background-size: cover;
+      }
 
-		main .slider .img2 {
-			background: url(imgs/articles/healthy_lifestyle.png) no-repeat center;
-			background-size: cover;
+      main .slider .img3 {
+        background: url(imgs/articles/lemon.png) no-repeat center;
+        background-size: cover;
+      }
 
-		}
+      main .slider .img4 {
+        background: url(imgs/articles/limited%20budget.png) no-repeat center;
+        background-size: cover;
+      }
 
-		main .slider .img3 {
-			background: url(imgs/articles/lemon.png) no-repeat center;
-			background-size: cover;
-		}
+      main .slider .img5 {
+        background: url(imgs/articles/coconut.png) no-repeat center;
+        background-size: cover;
+      }
+    </style>
+  </head>
 
-		main .slider .img4 {
-			background: url(imgs/articles/limited%20budget.png) no-repeat center;
-			background-size: cover;
-		}
+  <body>
+    <div class="wrapper">
+      <div id="warning">
+        <div class="container">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 24 24"
+              style="enable-background: new 0 0 24 24"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z"
+                ></path>
+              </g>
+            </svg>
+            Have a Problem? <a href="./contactUs.html">Contact us</a> or
+            <a href="cancel.html">cancel membership</a></span
+          >
+        </div>
+      </div>
+      <header>
+        <div class="container">
+          <a href="index.html" class="logo"
+            ><img src="imgs/logo.svg" alt=""
+          /></a>
+          <div class="search" style="display: flex">
+            <form id="searchForm">
+              <input
+                type="search"
+                id="search"
+                placeholder="Search for a recipe"
+                name="search"
+                value=""
+                maxlength="15"
+              />
+              <input type="submit" value="" />
+            </form>
+          </div>
 
-		main .slider .img5 {
-			background: url(imgs/articles/coconut.png) no-repeat center;
-			background-size: cover;
-		}
-	</style>
+          <button class="userButton">
+            <svg
+              class="open"
+              onclick="clickLogin(true);"
+              height="512pt"
+              viewBox="0 0 512 512"
+              width="512pt"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m437.019531 74.980469c-48.351562-48.351563-112.640625-74.980469-181.019531-74.980469-68.382812 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.636719-74.980469 181.019531 0 68.378906 26.628906 132.667969 74.980469 181.019531 48.351562 48.351563 112.636719 74.980469 181.019531 74.980469 68.378906 0 132.667969-26.628906 181.019531-74.980469 48.351563-48.351562 74.980469-112.640625 74.980469-181.019531 0-68.382812-26.628906-132.667969-74.980469-181.019531zm-308.679687 367.40625c10.707031-61.648438 64.128906-107.121094 127.660156-107.121094 63.535156 0 116.953125 45.472656 127.660156 107.121094-36.347656 24.972656-80.324218 39.613281-127.660156 39.613281s-91.3125-14.640625-127.660156-39.613281zm46.261718-218.519531c0-44.886719 36.515626-81.398438 81.398438-81.398438s81.398438 36.515625 81.398438 81.398438c0 44.882812-36.515626 81.398437-81.398438 81.398437s-81.398438-36.515625-81.398438-81.398437zm235.042969 197.710937c-8.074219-28.699219-24.109375-54.738281-46.585937-75.078125-13.789063-12.480469-29.484375-22.328125-46.359375-29.269531 30.5-19.894531 50.703125-54.3125 50.703125-93.363281 0-61.425782-49.976563-111.398438-111.402344-111.398438s-111.398438 49.972656-111.398438 111.398438c0 39.050781 20.203126 73.46875 50.699219 93.363281-16.871093 6.941406-32.570312 16.785156-46.359375 29.265625-22.472656 20.339844-38.511718 46.378906-46.585937 75.078125-44.472657-41.300781-72.355469-100.238281-72.355469-165.574219 0-124.617188 101.382812-226 226-226s226 101.382812 226 226c0 65.339844-27.882812 124.277344-72.355469 165.578125zm0 0"
+              ></path>
+            </svg>
+            <svg
+              class="close"
+              onclick="clickLogin(false);"
+              viewBox="0 0 512 512"
+              width="512pt"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0"
+              />
+              <path
+                d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0"
+              />
+              <path
+                d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0"
+              />
+            </svg>
+          </button>
+          <ul class="headerMenu">
+            <li>
+              <a href="index.html">Recipes</a>
+            </li>
+            <li>
+              <a href="articles.html">Articles</a>
+            </li>
+            <li>
+              <a href="calculator.html">Calorie Calculator</a>
+            </li>
+            <li>
+              <a href="mealplan.html">Meal Plan</a>
+            </li>
+          </ul>
+          <div class="login">
+            <form
+              id="authenticationForm"
+              action="index.html?page="
+              method="post"
+            >
+              <!--<input type="hidden" name="page" value="">-->
+              <input
+                type="text"
+                id="userName"
+                name="u"
+                value=""
+                placeholder="User"
+                maxlength="22"
+              />
+              <input
+                type="password"
+                id="userPassword"
+                name="c"
+                placeholder="Password"
+                maxlength="12"
+              />
+              <input
+                type="submit"
+                id="authentication"
+                value="Login"
+                name="authentication"
+              />
+              <a href="signUp2.html" id="signIn">Sign Up</a>
+              <div class="getPremium">
+                <span class="text">Don’t have an account?</span>
+                <a href="signUp2.html" class="getAccess"
+                  >Get access to premium</a
+                >
+                <a href="cancel.html" class="getAccess out"
+                  >Cancel Membership</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="title">
+          <h1>Your Guide to Culinary Discoveries and Cooking Education</h1>
+          <div class="line"></div>
+        </section>
+        <section class="slider container">
+          <div class="img1">
+            <div class="wrap">
+              <h2>5 WELLNESS TRENDS YOU WILL SEE THIS YEAR</h2>
+              <div class="line"><img src="imgs/line1.jpg" alt="" /></div>
+              <p>
+                Everything you need to know about the top trends for beauty,
+                health and fitness this year.
+              </p>
+              <a href="article_read_1.html" class="getRecipe">Read More</a>
+            </div>
+          </div>
+          <div class="img2">
+            <div class="wrap">
+              <h2>5 TIPS FOR A HEALTHY LIFESTYLE</h2>
+              <div class="line"><img src="imgs/line1.jpg" alt="" /></div>
+              <p>
+                A healthy lifestyle is one that helps maintain and improve your
+                health and wellness.
+              </p>
+              <a href="article_read_7.html" class="getRecipe">Read More</a>
+            </div>
+          </div>
+          <div class="img3">
+            <div class="wrap">
+              <h2>LEMON ZEST: BENEFITS FOR THE BODY</h2>
+              <div class="line"><img src="imgs/line1.jpg" alt="" /></div>
+              <p>
+                In addition to the juicy pulp of lemon, the brightly colored
+                dense peel, called the zest, has become widely used in cooking
+                and has tremendous health benefits.
+              </p>
+              <a href="article_read_11.html" class="getRecipe">Read More</a>
+            </div>
+          </div>
+          <div class="img4">
+            <div class="wrap">
+              <h2>TIPS FOR CLEAN EATING WITH A LIMITED BUDGET</h2>
+              <div class="line"><img src="imgs/line1.jpg" alt="" /></div>
+              <p>
+                One of the challenges we can face in adapting to a healthy
+                lifestyle is weighing the cost of our food bill.
+              </p>
+              <a href="article_read_4.html" class="getRecipe">Read More</a>
+            </div>
+          </div>
+          <div class="img5">
+            <div class="wrap">
+              <h2>COCONUT OIL WONDERS</h2>
+              <div class="line"><img src="imgs/line1.jpg" alt="" /></div>
+              <p>
+                Coconut oil, just like a cheeky dude who grew into a
+                full-fledged hunk, is now the hot, sexy oil that no one can shut
+                up about.
+              </p>
+              <a href="article_read_2.html" class="getRecipe">Read More</a>
+            </div>
+          </div>
+        </section>
 
+        <section class="title">
+          <h2>
+            FIND THE PERFECT FOOD AND DRINK IDEAS FOR EVERY OCASSION, FROM
+            WEEKNIGHT DINNERS TO HOLIDAY FEASTS.
+          </h2>
+          <div class="line"></div>
+        </section>
+        <section class="container">
+          <div class="sidebar sidebar--index">
+            <div class="sidebar__word-wrap">
+              <a class="sidebar__word" href="#">GLUTEN FREE</a
+              ><a class="sidebar__word" href="#">LOW CARB</a
+              ><a class="sidebar__word" href="#">VEGAN</a>
+            </div>
+            <div class="sidebar__word-wrap">
+              <a class="sidebar__word" href="#">ITALIAN</a
+              ><a class="sidebar__word" href="#">FRENCH</a
+              ><a class="sidebar__word" href="#">JAPANESE</a
+              ><a class="sidebar__word" href="#">Chinese</a
+              ><a class="sidebar__word" href="#">GREEK</a
+              ><a class="sidebar__word" href="#">INDIAN</a
+              ><a class="sidebar__word" href="#">ASIAN</a>
+            </div>
+            <div class="sidebar__word-wrap">
+              <a class="sidebar__word" href="#">PASTA</a
+              ><a class="sidebar__word" href="#">MEAT</a
+              ><a class="sidebar__word" href="#">RICE</a
+              ><a class="sidebar__word" href="#">CHICKEN</a
+              ><a class="sidebar__word" href="#">SALAD</a
+              ><a class="sidebar__word" href="#">DESSERT</a
+              ><a class="sidebar__word" href="#">CHEESE</a
+              ><a class="sidebar__word" href="#">SALMON</a
+              ><a class="sidebar__word" href="#">TOMATO</a>
+            </div>
+          </div>
+          <div class="set">
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/crunchy-ice-cream-dessert.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Crunchy Ice Cream Dessert</h3>
+                <p>Delicious ice cream dessert that is crunchy and sweet.</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=179763" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/best-ever-buckeyes.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Best Ever Buckeyes</h3>
+                <p>Delicious!</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=190392" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/lo-mein-noodles-with-shrimp.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Lo Mein Noodles with Shrimp</h3>
+                <p>Lo Mein Noodles with Shrimp</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=107047" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/frittata-15.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Frittata</h3>
+                <p>
+                  A frittata is an egg dish made mainly on the stove, easier
+                  than omelets, and can be vehicles for almost any veggies,
+                  cheeses, or meats you happen to have around. They are served
+                  in wedges and are easily transportable
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=199458" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/chicken-zorba.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Chicken Zorba</h3>
+                <p>Delicious tangy chicken meal with a lime twist.</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=326965" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/crunchy-asian-broccoli-coleslaw-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Crunchy Asian Broccoli Coleslaw</h3>
+                <p>Good for large groups because it makes a lot.</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=174917" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/wonderful-carrot-cake.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Wonderful Carrot Cake</h3>
+                <p>
+                  Using applesauce in place of the oil, less sugar and some
+                  wheat flour in place of white produces great results. The cake
+                  is much moister and the kids will love the sweet taste.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=173110" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/spicy-quinoa-cucumber-and-toma-c86daf.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Spicy Quinoa, Cucumber & Tomato Salad</h3>
+                <p>
+                  Recipe from the NY Times:
+                  http://www.nytimes.com/2010/07/13/health/nutrition/13recipehealth.html?_r=0
+                  This refreshing summer salad can sit in the refrigerator for a
+                  few hours without deteriorating, so it makes a great choice
+                  for bringing to work or to a summer picnic.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=183592" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="video1 container">
+          <video autoplay muted loop id="video1">
+            <source src="video/video1.mp4" type="video/mp4" />
+          </video>
+          <h1>FAVOURITE MEALS FROM WORLDLY CUISINES</h1>
+        </section>
+        <section class="container">
+          <div class="set">
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/cucumber-tomato-salad-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Cucumber Tomato Salad</h3>
+                <p>
+                  This salad is quick and easy -- the vinegar/sugar mixture
+                  gives the vegetables a sweet but tangy flavor.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=165332" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/pork-tenderloin-with-classic-mole-s-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Pork Tenderloin With Classic Mole Sauce</h3>
+                <p>A very detailed version of the classic Mole sauce.</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=159149" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/italian-sausage-stir-fry-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Italian Sausage Stir-Fry</h3>
+                <p>
+                  This is my take on a Chinese stir-fry using orzo in place of
+                  rice and traditional Italian ingredients
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=171349" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/cream-cheese-filled-banana-bread-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Cream Cheese-Filled Banana Bread</h3>
+                <p>
+                  The bread is soft, moist and the cream cheese layer is like
+                  having a layer of cheesecake baked into banana bread. It’s an
+                  easy, no mixer recipe that goes from bowl to oven in minutes.
+                  I use melted coconut oil so there’s no mixer to dirty and oil
+                  keeps bread softer and springier than butter. Coconut oil adds
+                  a nearly imperceptible undertone that’s sweeter and more
+                  fragrant than canola or vegetable oil, but substitute if
+                  desired. Sour cream (or Greek yogurt) is extra insurance for a
+                  soft, springy, bouncy, fluffy loaf. The big river of cream
+                  cheese is thick, bold, unmistakeable, and really makes this
+                  bread out of this world.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=948963" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="container">
+          <div class="set">
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/tilapia-with-garlic-sauce-and-pasta.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Tilapia with Garlic Sauce and Pasta</h3>
+                <p>
+                  This is a Garlicy fish, pasta dish in a Chile butter herb
+                  sauce.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=179930" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/j-d-s-chili-con-carne-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>J.D.'s Chili Con Carne</h3>
+                <p>J.D.'s Chili Con Carne</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=158455" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div class="video2">
+              <video autoplay muted loop id="video2">
+                <source src="video/video2.mp4" type="video/mp4" />
+              </video>
+              <h1>The Best Chicken Recipes</h1>
+            </div>
+          </div>
+        </section>
+        <section class="container">
+          <div class="set">
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/provincial-roasted-seafood-with-win.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>
+                  Provincial Roasted Seafood with Wine and Preserved Lemon
+                </h3>
+                <p>
+                  This recipe is a blend of ideas: part stolen from the Domestic
+                  Goddess herself, Nigela Lawson, part pinched from my
+                  experiences in Nice in the South of France, and part just
+                  experimenting in the kitchen. The result is a dead easy dish,
+                  but one that is sure to impress. For what can only be
+                  described as a luxurious dinner, this is actually relatively
+                  inexpensive - not cheap, but certainly a lot cheaper than it
+                  looks or tastes!
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=823966" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/mayonnaise-muffins-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Mayonnaise Muffins</h3>
+                <p>
+                  Give these light and delicious muffins a chance. They are
+                  quick and easy. I don't like Mayo, at all. An elderly woman
+                  made them for our lunch, and I had to be polite and try them.
+                  I fell in love with them, they are wonderful. Very tasty with
+                  butter and jam, or just dipped in gravy. You'll love them, and
+                  so will your family.
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=169794" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/spaghetti-with-mussels-and-spi-2d9eba.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Spaghetti with Mussels and Spinach</h3>
+                <p>This one-dish meal is simple to prepare and delicious.</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=159894" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/empanadas-meat-pie.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Empanadas (Meat Pie)</h3>
+                <p>Empanadas (Meat Pie)</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=1421" class="showRecipe">Show recipe</a>
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/tomato-basil-soup-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Tomato-Basil Soup</h3>
+                <p>Cooking Light March 2012</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=308826" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/triple-layer-banan-cream-pie-bars.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Triple Layer Banana Cream Pie Bars</h3>
+                <p>Triple Layer Banana Cream Pie Bars</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=202159" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/sauthon-tartare-salmon-tuna-tartare.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>SauThon tartare (Salmon & Tuna tartare)</h3>
+                <p>
+                  Deux portions séparés de tartare apprêtés différament - Saumon
+                  et Thon Two separate portions of tartare - Salmon and Tuna
+                </p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=194511" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img
+                  src="https://photos.bigoven.com/recipe/hero/seared-salmon-with-bacon-and-balsam-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="wrap">
+                <h3>Seared Salmon with bacon and balsamic honey and rosmary</h3>
+                <p>easy to make taste great</p>
+                <div class="links">
+                  <a href="#" class="addtoMealplan">+ Add to Meal plan</a>
+                  <a href="mealplan.html" class="inMealplan">In my meal plan</a>
+                  <a href="mealplan.html" class="add_error inMealplan">
+                    Oops! Limit: 5 recipes per Daily Meal Plan
+                  </a>
+                </div>
+                <a href="index.html?id=171227" class="showRecipe"
+                  >Show recipe</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="pagination"></div>
+      </main>
+      <footer>
+        <section class="ft-main">
+          <div class="ft-main-item side footer-menu">
+            <h2 class="ft-title">Menu</h2>
+            <ul>
+              <li><a href="/?page=policy">Privacy Policy</a></li>
+              <li><a href="/?page=terms">Terms &amp; Conditions</a></li>
+              <li><a href="/?page=faq">FAQ</a></li>
+              <li><a href="/?page=refund">Refund Policy</a></li>
+              <li><a href="/?page=subscriptionterms">Subscription Terms</a></li>
+              <li><a href="/?page=contactUs">Contact us</a></li>
+            </ul>
+          </div>
 
-</head>
+          <div class="ft-main-item" id="main-item">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="" /></a>
+            <div class="links">
+              <img src="imgs/mastercard.png" />
+              <img src="imgs/securecode.png" />
+              <img src="imgs/verified.png" />
+              <img src="imgs/visa-electron.png" />
+            </div>
+          </div>
 
-<body>
-	<div class="wrapper">
-		<div id="warning">
-			<div class="container">
-				<span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-						id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
-						xml:space="preserve">
-						<g>
-							<path
-								d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z">
-							</path>
-						</g>
-					</svg>
-					Have a Problem? <a href="./contactUs.html">Contact us</a> or <a href="cancel.html">cancel
-						membership</a></span>
-			</div>
-		</div>
-		<header>
-
-			<div class="container">
-				<a href="index.html" class="logo"><img src="imgs/logo.svg" alt=""></a>
-				<div class="search" style="display: flex;">
-					<form id="searchForm">
-						<input type="search" id="search" placeholder="Search for a recipe" name="search" value=""
-							maxlength="15">
-						<input type="submit" value="">
-
-					</form>
-
-				</div>
-
-
-				<button class="userButton">
-					<svg class="open" onclick="clickLogin(true);" height="512pt" viewBox="0 0 512 512" width="512pt"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="m437.019531 74.980469c-48.351562-48.351563-112.640625-74.980469-181.019531-74.980469-68.382812 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.636719-74.980469 181.019531 0 68.378906 26.628906 132.667969 74.980469 181.019531 48.351562 48.351563 112.636719 74.980469 181.019531 74.980469 68.378906 0 132.667969-26.628906 181.019531-74.980469 48.351563-48.351562 74.980469-112.640625 74.980469-181.019531 0-68.382812-26.628906-132.667969-74.980469-181.019531zm-308.679687 367.40625c10.707031-61.648438 64.128906-107.121094 127.660156-107.121094 63.535156 0 116.953125 45.472656 127.660156 107.121094-36.347656 24.972656-80.324218 39.613281-127.660156 39.613281s-91.3125-14.640625-127.660156-39.613281zm46.261718-218.519531c0-44.886719 36.515626-81.398438 81.398438-81.398438s81.398438 36.515625 81.398438 81.398438c0 44.882812-36.515626 81.398437-81.398438 81.398437s-81.398438-36.515625-81.398438-81.398437zm235.042969 197.710937c-8.074219-28.699219-24.109375-54.738281-46.585937-75.078125-13.789063-12.480469-29.484375-22.328125-46.359375-29.269531 30.5-19.894531 50.703125-54.3125 50.703125-93.363281 0-61.425782-49.976563-111.398438-111.402344-111.398438s-111.398438 49.972656-111.398438 111.398438c0 39.050781 20.203126 73.46875 50.699219 93.363281-16.871093 6.941406-32.570312 16.785156-46.359375 29.265625-22.472656 20.339844-38.511718 46.378906-46.585937 75.078125-44.472657-41.300781-72.355469-100.238281-72.355469-165.574219 0-124.617188 101.382812-226 226-226s226 101.382812 226 226c0 65.339844-27.882812 124.277344-72.355469 165.578125zm0 0">
-						</path>
-					</svg>
-					<svg class="close" onclick="clickLogin(false);" viewBox="0 0 512 512" width="512pt"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0" />
-						<path
-							d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0" />
-						<path
-							d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0" />
-					</svg>
-				</button>
-				<ul class="headerMenu">
-					<li>
-						<a href="index.html">Recipes</a>
-					</li>
-					<li>
-						<a href="articles.html">Articles</a>
-					</li>
-					<li>
-						<a href="calculator.html">Calorie Calculator</a>
-					</li>
-					<li>
-						<a href="mealplan.html">Meal Plan</a>
-					</li>
-				</ul>
-				<div class="login">
-					<form id="authenticationForm" action="index.html?page=" method="post">
-						<!--<input type="hidden" name="page" value="">-->
-						<input type="text" id="userName" name="u" value="" placeholder="User" maxlength="22">
-						<input type="password" id="userPassword" name="c" placeholder="Password" maxlength="12">
-						<input type="submit" id="authentication" value="Login" name="authentication">
-						<a href="signUp2.html" id="signIn">Sign Up</a>
-						<div class="getPremium">
-							<span class="text">Don’t have an account?</span>
-							<a href="signUp2.html" class="getAccess">Get access to premium</a>
-							<a href="cancel.html" class="getAccess out">Cancel Membership</a>
-						</div>
-					</form>
-				</div>
-
-
-			</div>
-
-		</header>
-		<main>
-			<section class="title">
-				<h1>Your Guide to Culinary Discoveries and Cooking Education</h1>
-				<div class="line"></div>
-			</section>
-			<section class="slider container">
-				<div class="img1">
-					<div class="wrap">
-						<h2>5 WELLNESS TRENDS YOU WILL SEE THIS YEAR</h2>
-						<div class="line"><img src="imgs/line1.jpg" alt=""></div>
-						<p>Everything you need to know about the top trends for beauty, health and fitness this year.
-						</p>
-						<a href="article_read_1.html" class="getRecipe">Read More</a>
-					</div>
-				</div>
-				<div class="img2">
-					<div class="wrap">
-						<h2>5 TIPS FOR A HEALTHY LIFESTYLE</h2>
-						<div class="line"><img src="imgs/line1.jpg" alt=""></div>
-						<p>A healthy lifestyle is one that helps maintain and improve your health and wellness.</p>
-						<a href="article_read_7.html" class="getRecipe">Read More</a>
-					</div>
-				</div>
-				<div class="img3">
-					<div class="wrap">
-						<h2>LEMON ZEST: BENEFITS FOR THE BODY</h2>
-						<div class="line"><img src="imgs/line1.jpg" alt=""></div>
-						<p>In addition to the juicy pulp of lemon, the brightly colored dense peel, called the zest, has
-							become widely used in cooking and has tremendous health benefits.</p>
-						<a href="article_read_11.html" class="getRecipe">Read More</a>
-					</div>
-				</div>
-				<div class="img4">
-					<div class="wrap">
-						<h2>TIPS FOR CLEAN EATING WITH A LIMITED BUDGET</h2>
-						<div class="line"><img src="imgs/line1.jpg" alt=""></div>
-						<p>One of the challenges we can face in adapting to a healthy lifestyle is weighing the cost of
-							our food bill.</p>
-						<a href="article_read_4.html" class="getRecipe">Read More</a>
-					</div>
-				</div>
-				<div class="img5">
-					<div class="wrap">
-						<h2>COCONUT OIL WONDERS</h2>
-						<div class="line"><img src="imgs/line1.jpg" alt=""></div>
-						<p>Coconut oil, just like a cheeky dude who grew into a full-fledged hunk, is now the hot, sexy
-							oil that no one can shut up about.</p>
-						<a href="article_read_2.html" class="getRecipe">Read More</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="title">
-				<h2>FIND THE PERFECT FOOD AND DRINK IDEAS FOR EVERY OCASSION, FROM WEEKNIGHT DINNERS TO HOLIDAY FEASTS.
-				</h2>
-				<div class="line"></div>
-			</section>
-			<section class="container">
-				<div class="sidebar sidebar--index">
-					<div class="sidebar__word-wrap"><a class="sidebar__word" href="#">GLUTEN FREE</a><a
-							class="sidebar__word" href="#">LOW CARB</a><a class="sidebar__word" href="#">VEGAN</a></div>
-					<div class="sidebar__word-wrap"><a class="sidebar__word" href="#">ITALIAN</a><a
-							class="sidebar__word" href="#">FRENCH</a><a class="sidebar__word" href="#">JAPANESE</a><a
-							class="sidebar__word" href="#">Chinese</a><a class="sidebar__word" href="#">GREEK</a><a
-							class="sidebar__word" href="#">INDIAN</a><a class="sidebar__word" href="#">ASIAN</a></div>
-					<div class="sidebar__word-wrap"><a class="sidebar__word"
-							href="#">PASTA</a><a class="sidebar__word"
-							href="#">MEAT</a><a class="sidebar__word"
-							href="#">RICE</a><a class="sidebar__word"
-							href="#">CHICKEN</a><a class="sidebar__word"
-							href="#">SALAD</a><a class="sidebar__word"
-							href="#">DESSERT</a><a class="sidebar__word"
-							href="#">CHEESE</a><a class="sidebar__word"
-							href="#">SALMON</a><a class="sidebar__word"
-							href="#">TOMATO</a></div>
-				</div>
-				<div class="set">
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/crunchy-ice-cream-dessert.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Crunchy Ice Cream Dessert</h3>
-							<p>Delicious ice cream dessert that is crunchy and sweet.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=179763" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/best-ever-buckeyes.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Best Ever Buckeyes</h3>
-							<p>Delicious!</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=190392" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/lo-mein-noodles-with-shrimp.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Lo Mein Noodles with Shrimp</h3>
-							<p>Lo Mein Noodles with Shrimp</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=107047" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/frittata-15.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Frittata</h3>
-							<p>A frittata is an egg dish made mainly on the stove, easier than omelets, and can be
-								vehicles for almost any veggies, cheeses, or meats you happen to have around. They are
-								served in wedges and are easily transportable </p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=199458" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/chicken-zorba.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Chicken Zorba</h3>
-							<p>Delicious tangy chicken meal with a lime twist.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=326965" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/crunchy-asian-broccoli-coleslaw-3.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Crunchy Asian Broccoli Coleslaw</h3>
-							<p>Good for large groups because it makes a lot.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=174917" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/wonderful-carrot-cake.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Wonderful Carrot Cake</h3>
-							<p>Using applesauce in place of the oil, less sugar and some wheat flour in place of white
-								produces great results. The cake is much moister and the kids will love the sweet taste.
-							</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=173110" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/spicy-quinoa-cucumber-and-toma-c86daf.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Spicy Quinoa, Cucumber & Tomato Salad</h3>
-							<p>Recipe from the NY Times:
-								http://www.nytimes.com/2010/07/13/health/nutrition/13recipehealth.html?_r=0
-								This refreshing summer salad can sit in the refrigerator for a few hours without
-								deteriorating, so it makes a great choice for bringing to work or to a summer picnic.
-							</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=183592" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="video1 container">
-				<video autoplay muted loop id="video1">
-					<source src="video/video1.mp4" type="video/mp4">
-				</video>
-				<h1>FAVOURITE MEALS FROM WORLDLY CUISINES</h1>
-			</section>
-			<section class="container">
-				<div class="set">
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/cucumber-tomato-salad-2.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Cucumber Tomato Salad</h3>
-							<p>This salad is quick and easy -- the vinegar/sugar mixture gives the vegetables a sweet
-								but tangy flavor.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=165332" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/pork-tenderloin-with-classic-mole-s-2.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Pork Tenderloin With Classic Mole Sauce</h3>
-							<p>A very detailed version of the classic Mole sauce. </p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=159149" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/italian-sausage-stir-fry-4.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Italian Sausage Stir-Fry</h3>
-							<p>This is my take on a Chinese stir-fry using orzo in place of rice and traditional Italian
-								ingredients</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=171349" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/cream-cheese-filled-banana-bread-2.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Cream Cheese-Filled Banana Bread</h3>
-							<p>The bread is soft, moist and the cream cheese layer is like having a layer of cheesecake
-								baked into banana bread. It’s an easy, no mixer recipe that goes from bowl to oven in
-								minutes. I use melted coconut oil so there’s no mixer to dirty and oil keeps bread
-								softer and springier than butter. Coconut oil adds a nearly imperceptible undertone
-								that’s sweeter and more fragrant than canola or vegetable oil, but substitute if
-								desired. Sour cream (or Greek yogurt) is extra insurance for a soft, springy, bouncy,
-								fluffy loaf. The big river of cream cheese is thick, bold, unmistakeable, and really
-								makes this bread out of this world.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=948963" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="container">
-				<div class="set">
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/tilapia-with-garlic-sauce-and-pasta.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Tilapia with Garlic Sauce and Pasta</h3>
-							<p>This is a Garlicy fish, pasta dish in a Chile butter herb sauce.</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=179930" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/j-d-s-chili-con-carne-2.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>J.D.'s Chili Con Carne</h3>
-							<p>J.D.'s Chili Con Carne</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=158455" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div class="video2">
-						<video autoplay muted loop id="video2">
-							<source src="video/video2.mp4" type="video/mp4">
-						</video>
-						<h1>The Best Chicken Recipes</h1>
-					</div>
-				</div>
-			</section>
-			<section class="container">
-				<div class="set">
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/provincial-roasted-seafood-with-win.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Provincial Roasted Seafood with Wine and Preserved Lemon</h3>
-							<p>This recipe is a blend of ideas: part stolen from the Domestic Goddess herself, Nigela
-								Lawson, part pinched from my experiences in Nice in the South of France, and part just
-								experimenting in the kitchen. The result is a dead easy dish, but one that is sure to
-								impress. For what can only be described as a luxurious dinner, this is actually
-								relatively inexpensive - not cheap, but certainly a lot cheaper than it looks or tastes!
-							</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=823966" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/mayonnaise-muffins-2.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Mayonnaise Muffins</h3>
-							<p>Give these light and delicious muffins a chance. They are quick and easy. I don't like
-								Mayo, at all. An elderly woman made them for our lunch, and I had to be polite and try
-								them. I fell in love with them, they are wonderful. Very tasty with butter and jam, or
-								just dipped in gravy. You'll love them, and so will your family. </p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=169794" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/spaghetti-with-mussels-and-spi-2d9eba.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Spaghetti with Mussels and Spinach</h3>
-							<p>This one-dish meal is simple to prepare and delicious. </p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=159894" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/empanadas-meat-pie.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Empanadas (Meat Pie)</h3>
-							<p>Empanadas (Meat Pie)</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=1421" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/tomato-basil-soup-5.jpg" alt="">
-						</div>
-						<div class="wrap">
-							<h3>Tomato-Basil Soup</h3>
-							<p>Cooking Light March 2012</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=308826" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/triple-layer-banan-cream-pie-bars.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Triple Layer Banana Cream Pie Bars</h3>
-							<p>Triple Layer Banana Cream Pie Bars</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=202159" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/sauthon-tartare-salmon-tuna-tartare.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>SauThon tartare (Salmon & Tuna tartare)</h3>
-							<p>Deux portions séparés de tartare apprêtés différament - Saumon et Thon
-								Two separate portions of tartare - Salmon and Tuna</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=194511" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-					<div>
-						<div class="img">
-							<img src="https://photos.bigoven.com/recipe/hero/seared-salmon-with-bacon-and-balsam-2.jpg"
-								alt="">
-						</div>
-						<div class="wrap">
-							<h3>Seared Salmon with bacon and balsamic honey and rosmary</h3>
-							<p>easy to make taste great</p>
-							<div class="links">
-								<a href="#" class="addtoMealplan">+ Add to Meal plan</a>
-								<a href="mealplan.html" class="inMealplan">In my meal plan</a>
-								<a href="mealplan.html" class="add_error inMealplan">
-									Oops! Limit: 5 recipes per Daily Meal Plan
-								</a>
-							</div>
-							<a href="index.html?id=171227" class="showRecipe">Show recipe</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<div id="pagination"></div>
-
-		</main>
-		<footer>
-			<section class="ft-main ">
-				<div class="ft-main-item side footer-menu">
-					<h2 class="ft-title">Menu</h2>
-					<ul>
-						<li><a href="/?page=policy">Privacy Policy</a></li>
-						<li><a href="/?page=terms">Terms &amp; Conditions</a></li>
-						<li><a href="/?page=faq">FAQ</a></li>
-						<li><a href="/?page=refund">Refund Policy</a></li>
-						<li><a href="/?page=subscriptionterms">Subscription Terms</a></li>
-						<li><a href="/?page=contactUs">Contact us</a></li>
-					</ul>
-				</div>
-
-				<div class="ft-main-item" id="main-item">
-					<a href="/" class="logo"><img src="imgs/logo.svg" alt=""></a>
-					<div class="links">
-						<img src="imgs/mastercard.png">
-						<img src="imgs/securecode.png">
-						<img src="imgs/verified.png">
-						<img src="imgs/visa-electron.png">
-					</div>
-				</div>
-
-				<div class="ft-main-item side footer-contact">
-					<h2 class="ft-title">Contact us</h2>
-					<ul>
-						<li>
-
-							<svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm94.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0">
-								</path>
-							</svg>
-							<a href="/?page=cancel">Cancel subscription</a>
-						</li>
-						<li><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-								xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20" width="20"
-								viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-								<g>
-									<g>
-										<polygon points="339.392,258.624 512,367.744 512,144.896 "></polygon>
-									</g>
-								</g>
-								<g>
-									<g>
-										<polygon points="0,144.896 0,367.744 172.608,258.624 "></polygon>
-									</g>
-								</g>
-								<g>
-									<g>
-										<path
-											d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z">
-										</path>
-									</g>
-								</g>
-								<g>
-									<g>
-										<path d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
-								L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z">
-										</path>
-									</g>
-								</g>
-							</svg>
-							<a href="mailto:support@nutrigrids.com">support@nutrigrids.com</a>
-						</li>
-						<li style="display: flex;"><svg id="Capa_1" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512"
-								width="20" xmlns="http://www.w3.org/2000/svg">
-								<g>
-									<circle cx="256" cy="165" r="75"></circle>
-									<path
-										d="m256 0c-81.108 0-165 61.714-165 165 0 94.351 147.217 274.08 153.472 281.609 2.856 3.413 7.075 5.391 11.528 5.391s8.672-1.978 11.528-5.391c6.255-7.529 153.472-187.258 153.472-281.609 0-90.981-74.019-165-165-165zm0 270c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z">
-									</path>
-									<path
-										d="m357.087 377.811c-28.922 41.873-55.961 75.306-66.487 87.973-8.643 10.327-21.241 16.216-34.6 16.216s-25.957-5.889-34.541-16.143c-10.551-12.698-37.608-46.155-66.544-88.046-38.83 13.722-63.915 35.1-63.915 59.189 0 41.42 73.874 75 165 75s165-33.58 165-75c0-24.088-25.084-45.467-63.913-59.189z">
-									</path>
-								</g>
-							</svg><img style="width: 165px; margin-left: 2px;" src="data:image/png;base64,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" alt="" /></li>
-						<li>
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M17.2969 4.49609L15.2168 2.41797C15.0701 2.27059 14.8957 2.15366 14.7036 2.07389C14.5116 1.99412 14.3056 1.95308 14.0977 1.95313C13.6738 1.95313 13.2754 2.11914 12.9766 2.41797L10.7383 4.65625C10.5909 4.80298 10.474 4.97738 10.3942 5.16944C10.3144 5.3615 10.2734 5.56743 10.2734 5.77539C10.2734 6.19922 10.4395 6.59766 10.7383 6.89648L12.375 8.5332C11.9919 9.37766 11.4592 10.1459 10.8027 10.8008C10.1479 11.4589 9.37975 11.9935 8.53516 12.3789L6.89844 10.7422C6.75171 10.5948 6.57731 10.4779 6.38525 10.3981C6.19319 10.3183 5.98727 10.2773 5.7793 10.2773C5.35547 10.2773 4.95703 10.4434 4.65821 10.7422L2.41797 12.9785C2.27041 13.1255 2.15338 13.3002 2.0736 13.4926C1.99383 13.685 1.95288 13.8913 1.95313 14.0996C1.95313 14.5234 2.11914 14.9219 2.41797 15.2207L4.49414 17.2969C4.97071 17.7754 5.62891 18.0469 6.30469 18.0469C6.44727 18.0469 6.58399 18.0352 6.71875 18.0117C9.35157 17.5781 11.9629 16.1777 14.0703 14.0723C16.1758 11.9688 17.5742 9.35937 18.0137 6.71875C18.1465 5.91211 17.8789 5.08203 17.2969 4.49609V4.49609Z"
-									 />
-							</svg>
-							<a
-								>Support:&nbsp;+357&nbsp;95128763</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<p>© 2025 nutrigridsrecipes.com. All Rights Reserved.</p>
-				<img style="width: 160px; display: block; margin-left: auto; margin-right: auto;" src="data:image/png;base64,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" alt="" />
-				</footer>
-	</div>
-	<script src="js/pagination.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="js/slick-carouse1.8.1.min.js"></script>
-	<script type="text/javascript" src="js/slider.js"></script>
-	<script type="text/javascript" src="js/index.js?"></script>
-</body>
-
+          <div class="ft-main-item side footer-contact">
+            <h2 class="ft-title">Contact us</h2>
+            <ul>
+              <li>
+                <svg
+                  height="512pt"
+                  viewBox="0 0 512 512"
+                  width="512pt"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm94.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0"
+                  ></path>
+                </svg>
+                <a href="/?page=cancel">Cancel subscription</a>
+              </li>
+              <li>
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <polygon
+                        points="339.392,258.624 512,367.744 512,144.896 "
+                      ></polygon>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <polygon
+                        points="0,144.896 0,367.744 172.608,258.624 "
+                      ></polygon>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z"
+                      ></path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+								L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+                <a href="mailto:support@nutrigrids.com"
+                  >support@nutrigrids.com</a
+                >
+              </li>
+              <li style="display: flex">
+                <svg
+                  id="Capa_1"
+                  enable-background="new 0 0 512 512"
+                  height="20"
+                  viewBox="0 0 512 512"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <circle cx="256" cy="165" r="75"></circle>
+                    <path
+                      d="m256 0c-81.108 0-165 61.714-165 165 0 94.351 147.217 274.08 153.472 281.609 2.856 3.413 7.075 5.391 11.528 5.391s8.672-1.978 11.528-5.391c6.255-7.529 153.472-187.258 153.472-281.609 0-90.981-74.019-165-165-165zm0 270c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z"
+                    ></path>
+                    <path
+                      d="m357.087 377.811c-28.922 41.873-55.961 75.306-66.487 87.973-8.643 10.327-21.241 16.216-34.6 16.216s-25.957-5.889-34.541-16.143c-10.551-12.698-37.608-46.155-66.544-88.046-38.83 13.722-63.915 35.1-63.915 59.189 0 41.42 73.874 75 165 75s165-33.58 165-75c0-24.088-25.084-45.467-63.913-59.189z"
+                    ></path>
+                  </g></svg><img
+                  style="width: 165px; margin-left: 2px"
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.2969 4.49609L15.2168 2.41797C15.0701 2.27059 14.8957 2.15366 14.7036 2.07389C14.5116 1.99412 14.3056 1.95308 14.0977 1.95313C13.6738 1.95313 13.2754 2.11914 12.9766 2.41797L10.7383 4.65625C10.5909 4.80298 10.474 4.97738 10.3942 5.16944C10.3144 5.3615 10.2734 5.56743 10.2734 5.77539C10.2734 6.19922 10.4395 6.59766 10.7383 6.89648L12.375 8.5332C11.9919 9.37766 11.4592 10.1459 10.8027 10.8008C10.1479 11.4589 9.37975 11.9935 8.53516 12.3789L6.89844 10.7422C6.75171 10.5948 6.57731 10.4779 6.38525 10.3981C6.19319 10.3183 5.98727 10.2773 5.7793 10.2773C5.35547 10.2773 4.95703 10.4434 4.65821 10.7422L2.41797 12.9785C2.27041 13.1255 2.15338 13.3002 2.0736 13.4926C1.99383 13.685 1.95288 13.8913 1.95313 14.0996C1.95313 14.5234 2.11914 14.9219 2.41797 15.2207L4.49414 17.2969C4.97071 17.7754 5.62891 18.0469 6.30469 18.0469C6.44727 18.0469 6.58399 18.0352 6.71875 18.0117C9.35157 17.5781 11.9629 16.1777 14.0703 14.0723C16.1758 11.9688 17.5742 9.35937 18.0137 6.71875C18.1465 5.91211 17.8789 5.08203 17.2969 4.49609V4.49609Z"
+                  />
+                </svg>
+                <a>Support:&nbsp;+357&nbsp;95128763</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <p>© <script>document.write(new Date().getFullYear());</script> nutrigridsrecipes.com. All Rights Reserved.</p>
+        <img
+          style="
+            width: 160px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          src="data:image/png;base64,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"
+          alt=""
+        />
+      </footer>
+    </div>
+    <script src="js/pagination.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/slick-carouse1.8.1.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/index.js?"></script>
+  </body>
 </html>

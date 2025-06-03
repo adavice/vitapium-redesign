@@ -1,346 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
     <title>nutrigrids Recipes</title>
     <link rel="shortcut icon" href="imgs/logo.svg" />
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.svg">
-    <link rel="stylesheet" href="css/open_sans.css">
-    <link rel="stylesheet" href="css/playfair.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/slick-carouse1.8.1.css">
-    <link rel="stylesheet" href="css/slick-carouse1.8.1-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/articles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.svg" />
+    <link rel="stylesheet" href="css/open_sans.css" />
+    <link rel="stylesheet" href="css/playfair.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/slick-carouse1.8.1.css" />
+    <link rel="stylesheet" href="css/slick-carouse1.8.1-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/articles.css" />
     <style>
-        main .slider .img1 {
-            background: url(https://photos.bigoven.com/recipe/hero/chicken-lentil-kale-soup.jpg) no-repeat center;
-            background-size: cover;
-        }
+      main .slider .img1 {
+        background: url(https://photos.bigoven.com/recipe/hero/chicken-lentil-kale-soup.jpg)
+          no-repeat center;
+        background-size: cover;
+      }
 
-        main .slider .img2 {
-            background: url(https://photos.bigoven.com/recipe/hero/simple-fondant-potatoes.jpg) no-repeat center;
-            background-size: cover;
-        }
+      main .slider .img2 {
+        background: url(https://photos.bigoven.com/recipe/hero/simple-fondant-potatoes.jpg)
+          no-repeat center;
+        background-size: cover;
+      }
 
-        main .slider .img3 {
-            background: url(https://photos.bigoven.com/recipe/hero/tomato-basil-dip.jpg) no-repeat center;
-            background-size: cover;
-        }
+      main .slider .img3 {
+        background: url(https://photos.bigoven.com/recipe/hero/tomato-basil-dip.jpg)
+          no-repeat center;
+        background-size: cover;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <div id="warning">
-            <div class="container">
-                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                        id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;"
-                        xml:space="preserve">
-                        <g>
-                            <path
-                                d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z">
-                            </path>
-                        </g>
-                    </svg> Have a Problem? <a href="./contactUs.html">Contact us</a> or <a href="cancel.html">cancel
-                        membership</a></span>
-            </div>
+      <div id="warning">
+        <div class="container">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 24 24"
+              style="enable-background: new 0 0 24 24"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M12,0C5.373,0,0,5.373,0,12s5.373,12,12,12s12-5.373,12-12S18.627,0,12,0z M12,19.66   c-0.938,0-1.58-0.723-1.58-1.66c0-0.964,0.669-1.66,1.58-1.66c0.963,0,1.58,0.696,1.58,1.66C13.58,18.938,12.963,19.66,12,19.66z    M12.622,13.321c-0.239,0.815-0.992,0.829-1.243,0c-0.289-0.956-1.316-4.585-1.316-6.942c0-3.11,3.891-3.125,3.891,0   C13.953,8.75,12.871,12.473,12.622,13.321z"
+                ></path>
+              </g>
+            </svg>
+            Have a Problem? <a href="./contactUs.html">Contact us</a> or
+            <a href="cancel.html">cancel membership</a></span
+          >
         </div>
-        <header>
-            <div class="container">
-                <a href="index.html" class="logo"><img src="imgs/logo.svg" alt=""></a>
-                <div class="search" style="display: flex;">
-                    <form id="searchForm">
-                        <input type="search" id="search" placeholder="Search for a recipe" name="search" value="" maxlength="15">
-                        <input type="submit" value="">
-                        
-                    </form>
+      </div>
+      <header>
+        <div class="container">
+          <a href="index.html" class="logo"
+            ><img src="imgs/logo.svg" alt=""
+          /></a>
+          <div class="search" style="display: flex">
+            <form id="searchForm">
+              <input
+                type="search"
+                id="search"
+                placeholder="Search for a recipe"
+                name="search"
+                value=""
+                maxlength="15"
+              />
+              <input type="submit" value="" />
+            </form>
+          </div>
 
-                </div>
-
-
-                <button class="userButton">
-                    <svg class="open" onclick="clickLogin(true);" height="512pt" viewBox="0 0 512 512" width="512pt"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="m437.019531 74.980469c-48.351562-48.351563-112.640625-74.980469-181.019531-74.980469-68.382812 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.636719-74.980469 181.019531 0 68.378906 26.628906 132.667969 74.980469 181.019531 48.351562 48.351563 112.636719 74.980469 181.019531 74.980469 68.378906 0 132.667969-26.628906 181.019531-74.980469 48.351563-48.351562 74.980469-112.640625 74.980469-181.019531 0-68.382812-26.628906-132.667969-74.980469-181.019531zm-308.679687 367.40625c10.707031-61.648438 64.128906-107.121094 127.660156-107.121094 63.535156 0 116.953125 45.472656 127.660156 107.121094-36.347656 24.972656-80.324218 39.613281-127.660156 39.613281s-91.3125-14.640625-127.660156-39.613281zm46.261718-218.519531c0-44.886719 36.515626-81.398438 81.398438-81.398438s81.398438 36.515625 81.398438 81.398438c0 44.882812-36.515626 81.398437-81.398438 81.398437s-81.398438-36.515625-81.398438-81.398437zm235.042969 197.710937c-8.074219-28.699219-24.109375-54.738281-46.585937-75.078125-13.789063-12.480469-29.484375-22.328125-46.359375-29.269531 30.5-19.894531 50.703125-54.3125 50.703125-93.363281 0-61.425782-49.976563-111.398438-111.402344-111.398438s-111.398438 49.972656-111.398438 111.398438c0 39.050781 20.203126 73.46875 50.699219 93.363281-16.871093 6.941406-32.570312 16.785156-46.359375 29.265625-22.472656 20.339844-38.511718 46.378906-46.585937 75.078125-44.472657-41.300781-72.355469-100.238281-72.355469-165.574219 0-124.617188 101.382812-226 226-226s226 101.382812 226 226c0 65.339844-27.882812 124.277344-72.355469 165.578125zm0 0">
-                        </path>
-                    </svg>
-                    <svg class="close" onclick="clickLogin(false);" viewBox="0 0 512 512" width="512pt"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0" />
-                        <path
-                            d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0" />
-                        <path
-                            d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0" />
-                    </svg>
-                </button>
-                <ul class="headerMenu">
-                    <li>
-                        <a href="index.html">Recipes</a>
-                    </li>
-                    <li>
-                        <a href="articles.html">Articles</a>
-                    </li>
-                    <li>
-                        <a href="calculator.html">Calorie Calculator</a>
-                    </li>
-                    <li>
-                        <a href="mealplan.html">Meal Plan</a>
-                    </li>
-                </ul>
-                <div class="login">
-                    <form id="authenticationForm" action="index.html?page=" method="post">
-                        <!--<input type="hidden" name="page" value="">-->
-                        <input type="text" id="userName" name="u" value="" placeholder="User" maxlength="22">
-                        <input type="password" id="userPassword" name="c" placeholder="Password" maxlength="12">
-                        <input type="submit" id="authentication" value="Login" name="authentication">
-                        <a href="signUp2.html" id="signIn">Sign Up</a>
-                        <div class="getPremium">
-                            <span class="text">Don’t have an account?</span>
-                            <a href="signUp2.html" class="getAccess">Get access to premium</a>
-                            <a href="cancel.html" class="getAccess out">Cancel Membership</a>
-                        </div>
-                    </form>
-                </div>
-
-
+          <button class="userButton">
+            <svg
+              class="open"
+              onclick="clickLogin(true);"
+              height="512pt"
+              viewBox="0 0 512 512"
+              width="512pt"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m437.019531 74.980469c-48.351562-48.351563-112.640625-74.980469-181.019531-74.980469-68.382812 0-132.667969 26.628906-181.019531 74.980469-48.351563 48.351562-74.980469 112.636719-74.980469 181.019531 0 68.378906 26.628906 132.667969 74.980469 181.019531 48.351562 48.351563 112.636719 74.980469 181.019531 74.980469 68.378906 0 132.667969-26.628906 181.019531-74.980469 48.351563-48.351562 74.980469-112.640625 74.980469-181.019531 0-68.382812-26.628906-132.667969-74.980469-181.019531zm-308.679687 367.40625c10.707031-61.648438 64.128906-107.121094 127.660156-107.121094 63.535156 0 116.953125 45.472656 127.660156 107.121094-36.347656 24.972656-80.324218 39.613281-127.660156 39.613281s-91.3125-14.640625-127.660156-39.613281zm46.261718-218.519531c0-44.886719 36.515626-81.398438 81.398438-81.398438s81.398438 36.515625 81.398438 81.398438c0 44.882812-36.515626 81.398437-81.398438 81.398437s-81.398438-36.515625-81.398438-81.398437zm235.042969 197.710937c-8.074219-28.699219-24.109375-54.738281-46.585937-75.078125-13.789063-12.480469-29.484375-22.328125-46.359375-29.269531 30.5-19.894531 50.703125-54.3125 50.703125-93.363281 0-61.425782-49.976563-111.398438-111.402344-111.398438s-111.398438 49.972656-111.398438 111.398438c0 39.050781 20.203126 73.46875 50.699219 93.363281-16.871093 6.941406-32.570312 16.785156-46.359375 29.265625-22.472656 20.339844-38.511718 46.378906-46.585937 75.078125-44.472657-41.300781-72.355469-100.238281-72.355469-165.574219 0-124.617188 101.382812-226 226-226s226 101.382812 226 226c0 65.339844-27.882812 124.277344-72.355469 165.578125zm0 0"
+              ></path>
+            </svg>
+            <svg
+              class="close"
+              onclick="clickLogin(false);"
+              viewBox="0 0 512 512"
+              width="512pt"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0"
+              />
+              <path
+                d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0"
+              />
+              <path
+                d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0"
+              />
+            </svg>
+          </button>
+          <ul class="headerMenu">
+            <li>
+              <a href="index.html">Recipes</a>
+            </li>
+            <li>
+              <a href="articles.html">Articles</a>
+            </li>
+            <li>
+              <a href="calculator.html">Calorie Calculator</a>
+            </li>
+            <li>
+              <a href="mealplan.html">Meal Plan</a>
+            </li>
+          </ul>
+          <div class="login">
+            <form
+              id="authenticationForm"
+              action="index.html?page="
+              method="post"
+            >
+              <!--<input type="hidden" name="page" value="">-->
+              <input
+                type="text"
+                id="userName"
+                name="u"
+                value=""
+                placeholder="User"
+                maxlength="22"
+              />
+              <input
+                type="password"
+                id="userPassword"
+                name="c"
+                placeholder="Password"
+                maxlength="12"
+              />
+              <input
+                type="submit"
+                id="authentication"
+                value="Login"
+                name="authentication"
+              />
+              <a href="signUp2.html" id="signIn">Sign Up</a>
+              <div class="getPremium">
+                <span class="text">Don’t have an account?</span>
+                <a href="signUp2.html" class="getAccess"
+                  >Get access to premium</a
+                >
+                <a href="cancel.html" class="getAccess out"
+                  >Cancel Membership</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main class="articles read">
+        <section class="title">
+          <h1 class="underline">TIPS FOR CLEAN EATING WITH A LIMITED BUDGET</h1>
+        </section>
+        <section class="container">
+          <div class="article_block">
+            <div class="article_illustration">
+              <img src="imgs/articles/limited%20budget.png" alt="" />
             </div>
+            <p>
+              One of the challenges we can face in adapting to a healthy
+              lifestyle is weighing the cost of our food bill. Sometimes the
+              high-quality food options aren't the cheapest products to purchase
+              and clean eating can be difficult to manage - especially if you're
+              studying or working part-time.
+            </p>
+            <h3>WHAT EXACTLY IS 'CLEAN EATING'?</h3>
+            <p>
+              Clean eating refers to eating minimally processed, nutritious
+              products that have no additives - foods such as fresh vegetables
+              and legumes, whole grains, fruits, and lean meats. Unfortunately,
+              the thing that can often keep us from buying these higher quality
+              foods is cost - good quality healthy products are often more
+              expensive than less healthy alternatives, especially when labeled
+              as 'organic'. However, clean eating on a budget is possible! It
+              just takes a little research, planning ahead, and sticking to your
+              meal plans.
+            </p>
+            <p>
+              Do you want to know how to eat clean without spending all your
+              money? Follow these simple tips to help you eat a healthy diet and
+              stay on track with your budget.
+            </p>
+            <h3>TIP 1. CHOOSE YOUR FOOD STORE WISELY</h3>
+            <p>
+              Have you ever walked into a food store to see the same food you
+              recently bought, for half the price? While this can be very
+              frustrating, there is a way to use it to your advantage. Do some
+              research by checking out nearby farmers' markets, health food
+              stores, small food chains and commercial stores - then compare
+              their prices. You will eventually learn which one offers the best
+              quality and bang for your buck so you can choose to buy food there
+              more often
+            </p>
+            <p>
+              The type of food stores available to you will depend on where you
+              live, but the more research you do before committing to a regular
+              store, the better. Sometimes your most convenient is less
+              budget-friendly than alternatives and can cost you more in the
+              long run.
+            </p>
+            <h3>TIP 2. CHOOSE CHEAPER BRANDS</h3>
+            <p>
+              Generic brands often contain products of the same quality, but can
+              be much cheaper. Remember that more expensive does not always mean
+              better quality! Sometimes the appearance and taste can vary from
+              brand to brand, but for 'clean' food this is often minimal.
+            </p>
+            <h3>TIP 3. INGREDIENTS ARE IMPORTANT!</h3>
+            <p>
+              Look for seasonal fruits and vegetables available in your area -
+              they are likely to be more expensive if sold outside of their
+              natural season. Do you need a prescription for products that are
+              not in season where you live? Try to swap the ingredients for
+              something similar that is in season. Your dish will probably taste
+              better for it too, because the ingredients are at their best!
+            </p>
+            <h3>TIP 4. DON'T BE GIVEN BY "ORGANIC" LABELS</h3>
+            <p>
+              Sometimes a product that appears organic (based on words or images
+              on the packaging) is actually not! Take care when choosing items
+              that appear 'organic' as this term can sometimes be used to make a
+              product appear healthier than its competition, when it is not
+              officially certified as an organic product. In order to be
+              certified as organic, an extensive process actually has to take
+              place where the business is audited by a third party organic
+              certification company.
+            </p>
+            <p>
+              Also, some foods are generally produced with fewer (or no)
+              chemicals, so buying a more expensive "organic" version may not
+              necessarily be worth it. The key is to do some research on how
+              your food is produced and then take this into account while
+              shopping. This way, you can choose organic when you need it, not
+              because the label promotes it that way.
+            </p>
+            <h3>TIP 5. BULK IS THE BEST!</h3>
+            <p>
+              If you know that a food is something you eat often and will last a
+              long time, buy it in bulk. For example, large bottles of healthy
+              oils and grains are good to buy in bulk as you will likely use
+              them a lot when preparing 'clean' food. When you first start to
+              change your diet, it may feel like your food bill is higher than
+              normal. In the first few shopping trips, you buy pantry staples
+              that will last. However, once your pantry is stocked, you'll find
+              that groceries are getting cheaper and you may not have to go as
+              often!
+            </p>
+            <h3>TIP 6. BE SMART WITH YOUR MEAL PREPARATION</h3>
+            <p>
+              After you go to a grocery store, you don't want to have so much
+              food left that it starts to go bad before you can cook it. To
+              avoid this, be prepared before shopping! Make a list of the meals
+              you will eat in the week before you go shopping, noting any social
+              events you have during that week. Then determine which ingredients
+              you need for each meal. If you plan meals according to recipes,
+              consider the number of serves and decide if this is realistic for
+              your week.
+            </p>
+            <p>
+              When it comes to cooking, you can also use all your ingredients
+              and prepare ahead of time. If a recipe says it serves two, use the
+              extra serves as a meal for another day. Sometimes, even if you
+              limit the number of servings in a recipe, you may still have to
+              buy all the food you would like to make the whole lot. Rather than
+              getting wasted, prepping the recipe in full means eating meals for
+              other days and can save you money in the long run!
+            </p>
+            <h3>TIP 7. SAVE WHAT YOU CAN</h3>
+            <p>
+              Sometimes plans change and you realize you don't have a chance to
+              eat all the fruits and vegetables you bought. Spend some time
+              chopping them up, seal them in zippered containers or bags, and
+              keep in the freezer. These can then be used roadside for meals
+              such as smoothies or stir fry.
+            </p>
+            <h3>EATING CLEAN DOES NOT HAVE TO BREAK YOUR BUDGET</h3>
+            <p>
+              Eating clean doesn't have to mean spending all your hard-earned
+              money on the most expensive organic products or superfoods.
+              Sometimes it only takes a few small changes to save you some
+              serious money and stay healthy.
+            </p>
 
-        </header>
-        <main class="articles read">
+            <!--******* sidebar-->
+          </div>
+          <aside>
+            <div>
+              <div class="img">
+                <img src="imgs/articles/coconut.png" alt="" />
+              </div>
+              <div class="wrap">
+                <h3>COCONUT OIL WONDERS</h3>
+                <a href="article_read_2.html" class="showRecipe">Read More</a>
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img src="imgs/articles/waking_up_early.png" alt="" />
+              </div>
+              <div class="wrap">
+                <h3>7 SIMPLE TIPS TO WAKE UP EARLY</h3>
+                <a href="article_read_13.html" class="showRecipe">Read More</a>
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img src="imgs/articles/serving_size.png" alt="" />
+              </div>
+              <div class="wrap">
+                <h3>HOW TO MEASURE SERVING SIZES</h3>
+                <a href="article_read_6.html" class="showRecipe">Read More</a>
+              </div>
+            </div>
+            <div>
+              <div class="img">
+                <img src="imgs/articles/live_longer.png" alt="" />
+              </div>
+              <div class="wrap">
+                <h3>9 NUTRITIONAL RULES TO HELP YOU LIVE LONGER</h3>
+                <a href="article_read_9.html" class="showRecipe">Read More</a>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </main>
+      <footer>
+        <section class="ft-main">
+          <div class="ft-main-item side footer-menu">
+            <h2 class="ft-title">Menu</h2>
+            <ul>
+              <li><a href="/?page=policy">Privacy Policy</a></li>
+              <li><a href="/?page=terms">Terms &amp; Conditions</a></li>
+              <li><a href="/?page=faq">FAQ</a></li>
+              <li><a href="/?page=refund">Refund Policy</a></li>
+              <li><a href="/?page=subscriptionterms">Subscription Terms</a></li>
+              <li><a href="/?page=contactUs">Contact us</a></li>
+            </ul>
+          </div>
 
-            <section class="title">
-                <h1 class="underline">TIPS FOR CLEAN EATING WITH A LIMITED BUDGET</h1>
-            </section>
-            <section class="container">
-                <div class="article_block">
-                    <div class="article_illustration">
-                        <img src="imgs/articles/limited%20budget.png" alt="">
-                    </div>
-                    <p>One of the challenges we can face in adapting to a healthy lifestyle is weighing the cost of our
-                        food bill. Sometimes the high-quality food options aren't the cheapest products to purchase and
-                        clean eating can be difficult to manage - especially if you're studying or working part-time.
-                    </p>
-                    <h3>WHAT EXACTLY IS 'CLEAN EATING'?</h3>
-                    <p>Clean eating refers to eating minimally processed, nutritious products that have no additives -
-                        foods such as fresh vegetables and legumes, whole grains, fruits, and lean meats. Unfortunately,
-                        the thing that can often keep us from buying these higher quality foods is cost - good quality
-                        healthy products are often more expensive than less healthy alternatives, especially when
-                        labeled as 'organic'. However, clean eating on a budget is possible! It just takes a little
-                        research, planning ahead, and sticking to your meal plans.</p>
-                    <p>Do you want to know how to eat clean without spending all your money? Follow these simple tips to
-                        help you eat a healthy diet and stay on track with your budget.</p>
-                    <h3>TIP 1. CHOOSE YOUR FOOD STORE WISELY</h3>
-                    <p>Have you ever walked into a food store to see the same food you recently bought, for half the
-                        price? While this can be very frustrating, there is a way to use it to your advantage. Do some
-                        research by checking out nearby farmers' markets, health food stores, small food chains and
-                        commercial stores - then compare their prices. You will eventually learn which one offers the
-                        best quality and bang for your buck so you can choose to buy food there more often</p>
-                    <p>The type of food stores available to you will depend on where you live, but the more research you
-                        do before committing to a regular store, the better. Sometimes your most convenient is less
-                        budget-friendly than alternatives and can cost you more in the long run.</p>
-                    <h3>TIP 2. CHOOSE CHEAPER BRANDS</h3>
-                    <p>Generic brands often contain products of the same quality, but can be much cheaper. Remember that
-                        more expensive does not always mean better quality! Sometimes the appearance and taste can vary
-                        from brand to brand, but for 'clean' food this is often minimal.</p>
-                    <h3>TIP 3. INGREDIENTS ARE IMPORTANT!</h3>
-                    <p>Look for seasonal fruits and vegetables available in your area - they are likely to be more
-                        expensive if sold outside of their natural season. Do you need a prescription for products that
-                        are not in season where you live? Try to swap the ingredients for something similar that is in
-                        season. Your dish will probably taste better for it too, because the ingredients are at their
-                        best!</p>
-                    <h3>TIP 4. DON'T BE GIVEN BY "ORGANIC" LABELS</h3>
-                    <p>Sometimes a product that appears organic (based on words or images on the packaging) is actually
-                        not! Take care when choosing items that appear 'organic' as this term can sometimes be used to
-                        make a product appear healthier than its competition, when it is not officially certified as an
-                        organic product. In order to be certified as organic, an extensive process actually has to take
-                        place where the business is audited by a third party organic certification company.</p>
-                    <p>Also, some foods are generally produced with fewer (or no) chemicals, so buying a more expensive
-                        "organic" version may not necessarily be worth it. The key is to do some research on how your
-                        food is produced and then take this into account while shopping. This way, you can choose
-                        organic when you need it, not because the label promotes it that way.</p>
-                    <h3>TIP 5. BULK IS THE BEST!</h3>
-                    <p>If you know that a food is something you eat often and will last a long time, buy it in bulk. For
-                        example, large bottles of healthy oils and grains are good to buy in bulk as you will likely use
-                        them a lot when preparing 'clean' food. When you first start to change your diet, it may feel
-                        like your food bill is higher than normal. In the first few shopping trips, you buy pantry
-                        staples that will last. However, once your pantry is stocked, you'll find that groceries are
-                        getting cheaper and you may not have to go as often!</p>
-                    <h3>TIP 6. BE SMART WITH YOUR MEAL PREPARATION</h3>
-                    <p>After you go to a grocery store, you don't want to have so much food left that it starts to go
-                        bad before you can cook it. To avoid this, be prepared before shopping! Make a list of the meals
-                        you will eat in the week before you go shopping, noting any social events you have during that
-                        week. Then determine which ingredients you need for each meal. If you plan meals according to
-                        recipes, consider the number of serves and decide if this is realistic for your week.</p>
-                    <p>When it comes to cooking, you can also use all your ingredients and prepare ahead of time. If a
-                        recipe says it serves two, use the extra serves as a meal for another day. Sometimes, even if
-                        you limit the number of servings in a recipe, you may still have to buy all the food you would
-                        like to make the whole lot. Rather than getting wasted, prepping the recipe in full means eating
-                        meals for other days and can save you money in the long run!</p>
-                    <h3>TIP 7. SAVE WHAT YOU CAN</h3>
-                    <p>Sometimes plans change and you realize you don't have a chance to eat all the fruits and
-                        vegetables you bought. Spend some time chopping them up, seal them in zippered containers or
-                        bags, and keep in the freezer. These can then be used roadside for meals such as smoothies or
-                        stir fry.</p>
-                    <h3>EATING CLEAN DOES NOT HAVE TO BREAK YOUR BUDGET</h3>
-                    <p>Eating clean doesn't have to mean spending all your hard-earned money on the most expensive
-                        organic products or superfoods. Sometimes it only takes a few small changes to save you some
-                        serious money and stay healthy.</p>
+          <div class="ft-main-item" id="main-item">
+            <a href="/" class="logo"><img src="imgs/logo.svg" alt="" /></a>
+            <div class="links">
+              <img src="imgs/mastercard.png" />
+              <img src="imgs/securecode.png" />
+              <img src="imgs/verified.png" />
+              <img src="imgs/visa-electron.png" />
+            </div>
+          </div>
 
-
-
-                    <!--******* sidebar-->
-                </div>
-                <aside>
-                    <div>
-                        <div class="img">
-                            <img src="imgs/articles/coconut.png" alt="">
-                        </div>
-                        <div class="wrap">
-                            <h3>COCONUT OIL WONDERS</h3>
-                            <a href="article_read_2.html" class="showRecipe">Read More</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img">
-                            <img src="imgs/articles/waking_up_early.png" alt="">
-                        </div>
-                        <div class="wrap">
-                            <h3>7 SIMPLE TIPS TO WAKE UP EARLY</h3>
-                            <a href="article_read_13.html" class="showRecipe">Read More</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img">
-                            <img src="imgs/articles/serving_size.png" alt="">
-                        </div>
-                        <div class="wrap">
-                            <h3>HOW TO MEASURE SERVING SIZES</h3>
-                            <a href="article_read_6.html" class="showRecipe">Read More</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img">
-                            <img src="imgs/articles/live_longer.png" alt="">
-                        </div>
-                        <div class="wrap">
-                            <h3>9 NUTRITIONAL RULES TO HELP YOU LIVE LONGER</h3>
-                            <a href="article_read_9.html" class="showRecipe">Read More</a>
-                        </div>
-                    </div>
-                </aside>
-            </section>
-
-        </main>
-        <footer>
-            <section class="ft-main ">
-                <div class="ft-main-item side footer-menu">
-                    <h2 class="ft-title">Menu</h2>
-                    <ul>
-                        <li><a href="/?page=policy">Privacy Policy</a></li>
-                        <li><a href="/?page=terms">Terms &amp; Conditions</a></li>
-                        <li><a href="/?page=faq">FAQ</a></li>
-                        <li><a href="/?page=refund">Refund Policy</a></li>
-                        <li><a href="/?page=subscriptionterms">Subscription Terms</a></li>
-                        <li><a href="/?page=contactUs">Contact us</a></li>
-                    </ul>
-                </div>
-
-                <div class="ft-main-item" id="main-item">
-                    <a href="/" class="logo"><img src="imgs/logo.svg" alt=""></a>
-                    <div class="links">
-                        <img src="imgs/mastercard.png">
-                        <img src="imgs/securecode.png">
-                        <img src="imgs/verified.png">
-                        <img src="imgs/visa-electron.png">
-                    </div>
-                </div>
-
-                <div class="ft-main-item side footer-contact">
-                    <h2 class="ft-title">Contact us</h2>
-                    <ul>
-                        <li>
-
-                            <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm94.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0">
-                                </path>
-                            </svg>
-                            <a href="/?page=cancel">Cancel subscription</a>
-                        </li>
-                        <li><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20" width="20"
-                                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                                <g>
-                                    <g>
-                                        <polygon points="339.392,258.624 512,367.744 512,144.896 "></polygon>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <polygon points="0,144.896 0,367.744 172.608,258.624 "></polygon>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path
-                                            d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z">
-                                        </path>
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <path
-                                            d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
-                                L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                            <a href="mailto:support@nutrigrids.com">support@nutrigrids.com</a>
-                        </li>
-                        <li><svg id="Capa_1" enable-background="new 0 0 512 512" height="20" viewBox="0 0 512 512"
-                                width="20" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                    <circle cx="256" cy="165" r="75"></circle>
-                                    <path
-                                        d="m256 0c-81.108 0-165 61.714-165 165 0 94.351 147.217 274.08 153.472 281.609 2.856 3.413 7.075 5.391 11.528 5.391s8.672-1.978 11.528-5.391c6.255-7.529 153.472-187.258 153.472-281.609 0-90.981-74.019-165-165-165zm0 270c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z">
-                                    </path>
-                                    <path
-                                        d="m357.087 377.811c-28.922 41.873-55.961 75.306-66.487 87.973-8.643 10.327-21.241 16.216-34.6 16.216s-25.957-5.889-34.541-16.143c-10.551-12.698-37.608-46.155-66.544-88.046-38.83 13.722-63.915 35.1-63.915 59.189 0 41.42 73.874 75 165 75s165-33.58 165-75c0-24.088-25.084-45.467-63.913-59.189z">
-                                    </path>
-                                </g>
-                            </svg> <a href="https://maps.app.goo.gl/9fEhK1GemQkRuUbi8"><img style="width: 155px;" src="data:image/png;base64,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" alt="" /></a></li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M17.2969 4.49609L15.2168 2.41797C15.0701 2.27059 14.8957 2.15366 14.7036 2.07389C14.5116 1.99412 14.3056 1.95308 14.0977 1.95313C13.6738 1.95313 13.2754 2.11914 12.9766 2.41797L10.7383 4.65625C10.5909 4.80298 10.474 4.97738 10.3942 5.16944C10.3144 5.3615 10.2734 5.56743 10.2734 5.77539C10.2734 6.19922 10.4395 6.59766 10.7383 6.89648L12.375 8.5332C11.9919 9.37766 11.4592 10.1459 10.8027 10.8008C10.1479 11.4589 9.37975 11.9935 8.53516 12.3789L6.89844 10.7422C6.75171 10.5948 6.57731 10.4779 6.38525 10.3981C6.19319 10.3183 5.98727 10.2773 5.7793 10.2773C5.35547 10.2773 4.95703 10.4434 4.65821 10.7422L2.41797 12.9785C2.27041 13.1255 2.15338 13.3002 2.0736 13.4926C1.99383 13.685 1.95288 13.8913 1.95313 14.0996C1.95313 14.5234 2.11914 14.9219 2.41797 15.2207L4.49414 17.2969C4.97071 17.7754 5.62891 18.0469 6.30469 18.0469C6.44727 18.0469 6.58399 18.0352 6.71875 18.0117C9.35157 17.5781 11.9629 16.1777 14.0703 14.0723C16.1758 11.9688 17.5742 9.35937 18.0137 6.71875C18.1465 5.91211 17.8789 5.08203 17.2969 4.49609V4.49609Z"
-                                     />
-                            </svg>
-                            <a
-                                >Support:&nbsp;+357&nbsp;95128763</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <p>© 2025 nutrigridsrecipes.com. All Rights Reserved.<br/>
-				<img style="width: 140px; margin-top: 5px;" src="data:image/png;base64,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" alt="" /></p>
-        </footer>
+          <div class="ft-main-item side footer-contact">
+            <h2 class="ft-title">Contact us</h2>
+            <ul>
+              <li>
+                <svg
+                  height="512pt"
+                  viewBox="0 0 512 512"
+                  width="512pt"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm94.273438 320.105469c8.339843 8.34375 8.339843 21.824219 0 30.167969-4.160157 4.160156-9.621094 6.25-15.085938 6.25-5.460938 0-10.921875-2.089844-15.082031-6.25l-64.105469-64.109376-64.105469 64.109376c-4.160156 4.160156-9.621093 6.25-15.082031 6.25-5.464844 0-10.925781-2.089844-15.085938-6.25-8.339843-8.34375-8.339843-21.824219 0-30.167969l64.109376-64.105469-64.109376-64.105469c-8.339843-8.34375-8.339843-21.824219 0-30.167969 8.34375-8.339843 21.824219-8.339843 30.167969 0l64.105469 64.109376 64.105469-64.109376c8.34375-8.339843 21.824219-8.339843 30.167969 0 8.339843 8.34375 8.339843 21.824219 0 30.167969l-64.109376 64.105469zm0 0"
+                  ></path>
+                </svg>
+                <a href="/?page=cancel">Cancel subscription</a>
+              </li>
+              <li>
+                <svg
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 512 512"
+                  style="enable-background: new 0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <polygon
+                        points="339.392,258.624 512,367.744 512,144.896 "
+                      ></polygon>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <polygon
+                        points="0,144.896 0,367.744 172.608,258.624 "
+                      ></polygon>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M480,80H32C16.032,80,3.36,91.904,0.96,107.232L256,275.264l255.04-168.032C508.64,91.904,495.968,80,480,80z"
+                      ></path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path
+                        d="M310.08,277.952l-45.28,29.824c-2.688,1.76-5.728,2.624-8.8,2.624c-3.072,0-6.112-0.864-8.8-2.624l-45.28-29.856
+                                L1.024,404.992C3.488,420.192,16.096,432,32,432h448c15.904,0,28.512-11.808,30.976-27.008L310.08,277.952z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+                <a href="mailto:support@nutrigrids.com"
+                  >support@nutrigrids.com</a
+                >
+              </li>
+              <li style="display: flex">
+                <svg
+                  id="Capa_1"
+                  enable-background="new 0 0 512 512"
+                  height="20"
+                  viewBox="0 0 512 512"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <circle cx="256" cy="165" r="75"></circle>
+                    <path
+                      d="m256 0c-81.108 0-165 61.714-165 165 0 94.351 147.217 274.08 153.472 281.609 2.856 3.413 7.075 5.391 11.528 5.391s8.672-1.978 11.528-5.391c6.255-7.529 153.472-187.258 153.472-281.609 0-90.981-74.019-165-165-165zm0 270c-57.891 0-105-47.109-105-105s47.109-105 105-105 105 47.109 105 105-47.109 105-105 105z"
+                    ></path>
+                    <path
+                      d="m357.087 377.811c-28.922 41.873-55.961 75.306-66.487 87.973-8.643 10.327-21.241 16.216-34.6 16.216s-25.957-5.889-34.541-16.143c-10.551-12.698-37.608-46.155-66.544-88.046-38.83 13.722-63.915 35.1-63.915 59.189 0 41.42 73.874 75 165 75s165-33.58 165-75c0-24.088-25.084-45.467-63.913-59.189z"
+                    ></path>
+                  </g></svg><img
+                  style="width: 165px; margin-left: 2px"
+                  src="data:image/png;base64,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"
+                  alt=""
+                />
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.2969 4.49609L15.2168 2.41797C15.0701 2.27059 14.8957 2.15366 14.7036 2.07389C14.5116 1.99412 14.3056 1.95308 14.0977 1.95313C13.6738 1.95313 13.2754 2.11914 12.9766 2.41797L10.7383 4.65625C10.5909 4.80298 10.474 4.97738 10.3942 5.16944C10.3144 5.3615 10.2734 5.56743 10.2734 5.77539C10.2734 6.19922 10.4395 6.59766 10.7383 6.89648L12.375 8.5332C11.9919 9.37766 11.4592 10.1459 10.8027 10.8008C10.1479 11.4589 9.37975 11.9935 8.53516 12.3789L6.89844 10.7422C6.75171 10.5948 6.57731 10.4779 6.38525 10.3981C6.19319 10.3183 5.98727 10.2773 5.7793 10.2773C5.35547 10.2773 4.95703 10.4434 4.65821 10.7422L2.41797 12.9785C2.27041 13.1255 2.15338 13.3002 2.0736 13.4926C1.99383 13.685 1.95288 13.8913 1.95313 14.0996C1.95313 14.5234 2.11914 14.9219 2.41797 15.2207L4.49414 17.2969C4.97071 17.7754 5.62891 18.0469 6.30469 18.0469C6.44727 18.0469 6.58399 18.0352 6.71875 18.0117C9.35157 17.5781 11.9629 16.1777 14.0703 14.0723C16.1758 11.9688 17.5742 9.35937 18.0137 6.71875C18.1465 5.91211 17.8789 5.08203 17.2969 4.49609V4.49609Z"
+                  />
+                </svg>
+                <a>Support:&nbsp;+357&nbsp;95128763</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <p>
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          nutrigridsrecipes.com. All Rights Reserved.
+        </p>
+        <img
+          style="
+            width: 160px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          "
+          src="data:image/png;base64,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"
+          alt=""
+        />
+      </footer>
     </div>
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="js/slick-carouse1.8.1.min.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
     <script type="text/javascript" src="js/index.js?"></script>
-</body>
-
+  </body>
 </html>

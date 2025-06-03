@@ -846,6 +846,7 @@ footer p {
   text-align: center;
   color: var(--text-darker);
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 ul {
