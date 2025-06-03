@@ -556,7 +556,7 @@ main .video2 h1 {
 
 .terms td {
   padding: 5px;
-  border: 1px solid white;
+  border: 1px solid var(--bg-text);
 }
 
 .links {

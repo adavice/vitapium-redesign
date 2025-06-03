@@ -62,8 +62,14 @@ main .premiumRecipe .recipe .getAccessLink {
 	font-size: 18px;
 	color: #fff;
 	font-weight: 600;
-	background: var(--accent1);
-	border-radius: 5px;
+	background-image: linear-gradient(to right, var(--accent2), var(--accent1), var(--accent1), var(--main));
+    background-size: 300% 100%;
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+	border-radius: 50px;
 	text-decoration: none;
 	padding: 10px 30px;
 	display: inline-block;
